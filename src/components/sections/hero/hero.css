@@ -1,0 +1,108 @@
+.hero-area {
+    position: relative;
+    padding: 120px 0px;
+    background-color: #925EFF;
+    z-index: 1;
+}
+
+img.hero-bg-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.hero-vectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.hero-vectors img {
+    position: absolute;
+}
+
+.hero-vectors img:first-child {
+    top: 0;
+    left: 0;
+}
+
+.hero-vectors img:nth-child(2) {top: 15%;left: 25%;}
+
+.hero-vectors img:nth-child(3) {
+    top: 15%;
+    right: 25%;
+}
+
+.hero-vectors img:nth-child(4) {
+    top: 40%;
+    left: 15%;
+    transform: rotate(35deg);
+}
+
+.hero-vectors img:nth-child(5) {
+    top: 40%;
+    right: 15%;
+    transform: rotate(-15deg);
+}
+
+.hero-vectors img:nth-child(6) {
+    bottom: 15%;
+    left: 31%;
+    transform: rotate(15deg);
+}
+
+.hero-vectors img:nth-child(7) {
+    bottom: 10%;
+    right: 30%;
+}
+
+.hero-vectors img:nth-child(8) {
+    bottom: 25%;
+    right: 19%;
+}
+
+.hero-vectors img:nth-child(9) {
+    bottom: 0;
+    right: 0px;
+}
+
+
+.hero-text {
+    position: relative;
+    max-width: 980px;
+    margin: 50px auto;
+}
+
+.hero-text h4 {
+    color: #FFFB7C;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.hero-text h2 {
+    font-size: 76px;
+    color: #fff;
+    line-height: 80px;
+    margin: 30px auto;
+}
+
+.hero-text p {
+    font-size: 30px;
+    line-height: 38px;
+    color: #fff;
+    margin: 30px auto;
+}
+
+a.btn-style-a {
+    position: relative;
+    background-color: #0A0911;
+    padding: 15px 25px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
