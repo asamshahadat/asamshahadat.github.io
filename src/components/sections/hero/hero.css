@@ -96,6 +96,7 @@ img.hero-bg-shape {
     line-height: 38px;
     color: #fff;
     margin: 30px auto;
+    font-weight: 200;
 }
 
 .btn-style-a {
@@ -105,4 +106,35 @@ img.hero-bg-shape {
     display: inline-block;
     color: #fff;
     text-decoration: none;
+}
+
+
+@media screen and (max-width: 960px) {
+    .hero-text h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .hero-text p {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 20px auto;
+    }
+    
+    .hero-text {
+        padding: 20px;
+    }
+    
+    .hero-text h2 {
+        margin: 15px auto;
+    }
+    
+    .hero-text h4 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    
+    .hero-vectors {
+        opacity: .5;
+    }
 }
