@@ -1,6 +1,7 @@
 // import logo from '../logo.svg';
-import "./css/header.css";
+import "././css/header.css";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import React, { useState } from "react";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../elements/icons";
 
@@ -27,14 +28,14 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/about" activeclassname="active" className="nav-links" onClick={handleClick} >
+                        <Link to="about" smooth={true} duration={500} spy={true} className="nav-links" onClick={handleClick} activeClass="active">
                             About
-                        </NavLink>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <NavLink  to="/expertise" activeclassname="active" className="nav-links" onClick={handleClick} >
+                        <Link to="expert" smooth={true} duration={500} spy={true} className="nav-links" onClick={handleClick} activeClass="active">
                             Expertise
-                        </NavLink>
+                        </Link>
                     </li>
                     <li className="nav-item">
                         <NavLink  to="/portfolio" activeclassname="active" className="nav-links" onClick={handleClick} >
@@ -42,9 +43,12 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/contact" activeclassname="active" className="nav-links" onClick={handleClick} >
-                            Contact Us
-                        </NavLink>
+                        {/* <NavLink to="/contact" activeclassname="active" className="nav-links" onClick={handleClick} >
+                            Contact
+                        </NavLink> */}
+                        <Link to="footer" smooth={true} duration={500} spy={true} className="nav-links" onClick={handleClick} activeClass="active">
+                            Find Me
+                        </Link>
                     </li>
                 </ul>
                 <div className="nav-icon" onClick={handleClick}>

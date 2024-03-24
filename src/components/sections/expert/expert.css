@@ -1,0 +1,64 @@
+.expert-in-area {
+    position: relative;
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.expert-in-area img.expert-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.expert-in-area .container {
+    margin: 0px auto;
+}
+
+.expert-title h2 {
+    color: #fff;
+}
+
+.expert-contents {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.expert-title {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.single-expert-list {
+    position: relative;
+    background-color: #b190f5;
+    border: 2px solid #fff;
+    border-bottom: none;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    padding: 50px 30px;
+    text-align: left;
+}
+
+.single-expert-list h3 {
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 54px;
+    margin-bottom: 10px;
+}
+
+.single-expert-list h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1023px) {
+ 
+}

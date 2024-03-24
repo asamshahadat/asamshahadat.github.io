@@ -4,7 +4,7 @@ import shahadatImg from '../../../assets/img/shahadat/shahadat.png';
 import whoImgBgShape from '../../../assets/img/shape/who-am-i.png'; 
 const WhoIam = () => {
   return (
-    <div className="who-area flex justify-center items-center">
+    <div className="who-area flex justify-center items-center" id="about">
       <div className="container">
         <div className="who-img-text-wrapper flex justify-center gap-10 flex-col md:flex-row p-20">
           <div className="whoi-img md:w-1/2 text-center">

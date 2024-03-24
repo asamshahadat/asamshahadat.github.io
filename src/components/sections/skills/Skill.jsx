@@ -3,10 +3,10 @@ import skillBg from '../../../assets/img/shape/skills-bg.png';
 
 const Skill = () => {
   return (
-    <div className="skill-area flex justify-center">
+    <div className="skill-area flex justify-center" id="expertise" >
       <div className="container">
         <div className="skills-wrapper">
-            <img src= {skillBg} className='skill-bg' alt="" />
+            <img src={skillBg} className='skill-bg' alt="" />
             <div className="skills-content">
                 <h3>Programming & Framework</h3>
                 <ul className="skills-lists">

@@ -8,7 +8,7 @@ import linkedlnIcon from '../../assets/img/icon/linkedln.png';
 import githubIcon from '../../assets/img/icon/github.png';
 const Footer = () => {
     return (
-        <footer className="footer-area">
+        <footer className="footer-area" id="footer">
             <img src={footerBg} className="footerbg" alt="" />
             <div className="container">
                 <div className="footer-widgets">
@@ -35,22 +35,22 @@ const Footer = () => {
                     </ul>
                     <ul className="footer-social">
                         <li>
-                            <Link to="/">
+                            <Link to="https://github.com/asamshahadat" target="_blank">
                                 <img src={githubIcon} alt="" />
                             </Link>
                         </li>
                         <li>
-                            <Link to="/">
+                            <Link to="https://twitter.com/asamshahadat" target="_blank">
                                 <img src={twitterIcon} alt="" />
                             </Link>
                         </li>
                         <li>
-                            <Link to="/">
+                            <Link to="https://www.linkedin.com/in/asamshahadat/" target="_blank">
                                 <img src={linkedlnIcon} alt="" />
                             </Link>
                         </li>
                         <li>
-                            <Link to="/">
+                            <Link to="skype:asamshahadat? chat" target="_blank">
                                 <img src={skypeIcon} alt="" />
                             </Link>
                         </li>
