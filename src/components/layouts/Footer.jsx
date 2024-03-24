@@ -57,7 +57,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer-copyright">
-                    <p>©Shahadat 2023. All rights reserved.</p>
+                    <p>©Shahadat 2024. All rights reserved.</p>
                 </div>
             </div>
         </footer>
