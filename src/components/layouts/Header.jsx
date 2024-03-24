@@ -37,11 +37,11 @@ const Header = () => {
                             Expertise
                         </Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <NavLink  to="/" activeclassname="active" className="nav-links" onClick={handleClick} >
                             Portfolio
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                         {/* <NavLink to="/contact" activeclassname="active" className="nav-links" onClick={handleClick} >
                             Contact
