@@ -38,7 +38,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <NavLink  to="/portfolio" activeclassname="active" className="nav-links" onClick={handleClick} >
+                        <NavLink  to="/" activeclassname="active" className="nav-links" onClick={handleClick} >
                             Portfolio
                         </NavLink>
                     </li>
