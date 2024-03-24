@@ -74,7 +74,7 @@ img.hero-bg-shape {
 
 .hero-text {
     position: relative;
-    max-width: 980px;
+    max-width: 700px;
     margin: 50px auto;
 }
 
@@ -92,8 +92,8 @@ img.hero-bg-shape {
 }
 
 .hero-text p {
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 18px;
+    line-height: 26px;
     color: #fff;
     margin: 30px auto;
     font-weight: 200;
@@ -116,8 +116,8 @@ img.hero-bg-shape {
     }
     
     .hero-text p {
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 24px;
         margin: 20px auto;
     }
     

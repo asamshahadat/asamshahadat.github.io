@@ -1,0 +1,156 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* "build:tailwindcss": "tailwindcss build src/assets/css/style.css -o src/assets/css/build/tailwind.css", */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; /* Include padding and border inside element */
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* Typgography */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "DM Sans", sans-serif;
+}
+
+p {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 30px auto;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+
+h2.left-long-line {
+    position: relative;
+    padding-left: 120px;
+}
+
+h2.left-long-line:before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #5D3BEE;
+    left: 0;
+    top: calc(50% - 1px);
+}
+
+
+/* Custom Predefined Layouts/Grid/Col/Container */
+
+/* .container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto;
+} */
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 960px) {
+  h2 {
+      font-size: 40px;
+      line-height: 50px;
+  }
+  
+  p {
+      font-size: 16px;
+      line-height: 22px;
+  }
+
+  
+  h2 {
+      margin: 15px auto;
+  }
+  
+  h4 {
+      font-size: 22px;
+      line-height: 28px;
+  }
+
+ 
+    h2.left-long-line {
+        font-size: 26px;
+        padding-left: 60px;
+    }
+
+    h2.left-long-line:before {
+        width: 50px;
+    }
+ 
+}
+/* ============================== */

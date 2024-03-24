@@ -1,0 +1,51 @@
+.who-area {
+    position: relative;
+}
+
+.whoi-img {
+    position: relative;
+    padding: 80px 0px;
+}
+
+.whoi-img img.whoimbgshape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.who-text {
+    position: relative;
+}
+
+.who-text  h2 {
+    margin-bottom: 20px;
+}
+
+
+.who-text p {
+    font-weight: 300;
+    color: #646171;
+    margin: 15px auto;
+}
+
+
+@media screen and (max-width: 960px) {
+ 
+    
+    .who-img-text-wrapper {
+        flex-direction: column !important;
+    }
+    
+    .who-img-text-wrapper .whoi-img, .who-img-text-wrapper .who-text {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .who-img-text-wrapper h2.left-long-line {
+        margin-left: 0px;
+    }
+    
+    
+}

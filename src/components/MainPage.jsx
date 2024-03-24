@@ -2,17 +2,16 @@
 import '../App.css';   
 // import { Link } from "react-router-dom";
 import Header from './layouts/Header';
+import WhoIam from './sections/about/WhoAmi';
 import Hero from './sections/hero/Hero';
 const MainPageContent = () => {
   return (
     <div className="App">
       <Header />
       <Hero />
+      <WhoIam />
        {/* <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" />
-         <p>
-           Hello It's Me SM Shahadat Hossain.
-         </p>
          <a
            className="App-link"
            href="https:reactjs.org"
@@ -21,8 +20,6 @@ const MainPageContent = () => {
          >
            Learn React
          </a>
-
-         <Link to="/">Home</Link>
        </header> */}
      </div>
   );
