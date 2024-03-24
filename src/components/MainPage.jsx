@@ -3,6 +3,7 @@ import '../App.css';
 // import { Link } from "react-router-dom";
 import Header from './layouts/Header';
 import WhoIam from './sections/about/WhoAmi';
+import AcademicInfo from './sections/education/AcademicInfo';
 import Hero from './sections/hero/Hero';
 const MainPageContent = () => {
   return (
@@ -10,6 +11,7 @@ const MainPageContent = () => {
       <Header />
       <Hero />
       <WhoIam />
+      <AcademicInfo />
        {/* <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" />
          <a

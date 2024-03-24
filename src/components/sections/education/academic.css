@@ -1,0 +1,54 @@
+.academic-title { 
+    text-align: left;
+}
+.academic-title h2.left-long-line {
+    max-width: 475px;
+    margin-right: 0px;
+    margin-left: auto;
+}
+.single-academic-info {
+    position: relative;
+    margin: 0px auto 30px;
+    width: 100%;
+}
+
+.single-academic-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    margin: 10px auto;
+}
+
+.single-academic-info p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #6541FF;
+    font-weight: 500;
+    margin: 0px auto;
+}
+
+
+
+@media screen and (max-width: 1023px) {
+    .academic-title h2.left-long-line {
+        padding-left: 60px;
+        font-size: 34px;
+        margin: 0px auto;
+    }
+    
+    .academic-title h2.left-long-line:before {
+        width: 50px;
+    }
+    
+    .academic-wrapper {
+        flex-direction: column;
+    }
+    
+    .academic-wrapper>div {
+        width: 100%;
+    }
+    
+    .single-academic-info {
+        text-align: center;
+    }
+}
