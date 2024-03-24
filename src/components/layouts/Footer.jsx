@@ -8,7 +8,6 @@ import linkedlnIcon from '../../assets/img/icon/linkedln.png';
 import githubIcon from '../../assets/img/icon/github.png';
 const Footer = () => {
     return (
-        <>
         <footer className="footer-area">
             <img src={footerBg} className="footerbg" alt="" />
             <div className="container">
@@ -62,7 +61,6 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-        </>
         
     );
 };
