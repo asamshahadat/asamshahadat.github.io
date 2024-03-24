@@ -1,5 +1,5 @@
 // import logo from '../logo.svg';
-import "./footer.css";  
+import "./css/footer.css";  
 import { Link } from "react-router-dom";
 import footerBg from '../../assets/img/shape/footer-bg.png';
 import skypeIcon from '../../assets/img/icon/skype.png';
