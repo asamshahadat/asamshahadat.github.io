@@ -102,6 +102,7 @@
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    
 }
 
 .portfolio-images img {
@@ -117,25 +118,25 @@
 
 
 .my-masonry-grid {
-    display: flex;
-    margin-left: -30px; /* gutter size offset */
+    display: flex; 
     width: auto;
-    justify-content: center;
-  }
+    justify-content: center; 
+    gap: 15px;
+    padding: 15px;
+}
   
-  .my-masonry-grid_column {
-    padding-left: 30px; /* gutter size */
+  .my-masonry-grid_column { 
     background-clip: padding-box;
   }
   
-  .image-item {
-    margin-bottom: 30px; /* vertical gutter */
+  .image-item { 
   }
   
   .image-item img {
     width: 100%;
     display: block;
     border-radius: 5px;
+    margin-bottom: 15px;
   }
   
   
