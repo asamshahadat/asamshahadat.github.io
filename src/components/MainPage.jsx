@@ -8,7 +8,7 @@ import Hero from './sections/hero/Hero';
 import Skill from './sections/skills/Skill';
 const MainPageContent = () => {
   return (
-    <div className="App">
+    <>
       <Header/>
       <Hero/>
       <WhoIam/>
@@ -16,7 +16,7 @@ const MainPageContent = () => {
       <Skill/>
       <Expert/>
       <Footer/>
-     </div>
+    </>
   );
 };
 

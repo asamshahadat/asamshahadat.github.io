@@ -4,14 +4,18 @@ import {
   Route,
 } from "react-router-dom";
 import MainPageContent from "./components/MainPage";
+import PortfolioPage from "./components/pages/PortfolioPage";
  
 const App = () => {
   return (
-    <Router>
-      <Routes> 
-          <Route path="/" element={<MainPageContent />} /> 
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Routes> 
+            <Route path="/" element={<MainPageContent />} /> 
+            <Route path="/portfolio" element={<PortfolioPage />} /> 
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
