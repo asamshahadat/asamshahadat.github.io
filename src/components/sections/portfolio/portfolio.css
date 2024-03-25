@@ -47,6 +47,10 @@
 }
 .single-portfolio-list img {
     margin-bottom: 20px;
+    max-height: 190px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
 }
 
 
@@ -72,6 +76,69 @@
     color: #32ffaa;
     font-weight: 400;
 }
+
+
+
+
+/* Portfolio Details CSS */
+.portfolio-details-page {
+    position: relative;
+}
+
+.portfolio-detail {
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.portfolio-detail h2 {
+    color: #fff;
+    margin: 0px auto 40px;
+}
+
+.portfolio-images {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.portfolio-images img {
+    max-width: 580px;
+    border: 1px solid #b5b5b5;
+    height: fit-content;
+}
+
+.portfolio-detail p {
+    color: #fff;
+    font-weight: 300;
+}
+
+
+.my-masonry-grid {
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+    justify-content: center;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  .image-item {
+    margin-bottom: 30px; /* vertical gutter */
+  }
+  
+  .image-item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  
 @media screen and (max-width: 1023px) {
  
 }

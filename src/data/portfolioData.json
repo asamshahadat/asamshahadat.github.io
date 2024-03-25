@@ -1,30 +1,50 @@
 [
     {
-      "id": 1,
-      "image": "/assets/projects-img/qniko-html.png",
-      "title": "Qniko - Startup Agency HTML5 Template With RTL Support",
-      "description": "Qniko is a creative, unique, clean Agency HTML5 Template. It is an excellent HTML template for Startup Agency, Mobile Appshowcase, software, Web Application, SEO Website, Portfolio Website, IT Solutions and Corporate website.",
-      "link": "/"
-    },
-    {
-      "id": 2,
-      "image": "/assets/projects-img/interior-design.png",
-      "title": "Interior Design - HTML5 Template for Business",
-      "description": "Interior Design – HTML5 Template for interior designer is perfect for interior designer, Decor, Architecture Business. It’s clean and creative elements which help you to build your Interior Business website.",
-      "link": "/"
+        "id": 4,
+        "images": [
+          "/assets/projects-img/sportdenkwerk/sportdenkwerk-1.png",
+          "/assets/projects-img/sportdenkwerk/sportdenkwerk-3.png",
+          "/assets/projects-img/sportdenkwerk/sportdenkwerk-2.png",
+          "/assets/projects-img/sportdenkwerk/sportdenkwerk-4.png",
+          "/assets/projects-img/sportdenkwerk/sportdenkwerk-5.png"
+
+      ],
+        "title": "Sportdenkwerkev (Wordpress)",
+        "description": "Enhancing Sports Club Visibility through Drone Aerial Photography I'm proud to showcase a project where I fully developed a website for a client, highlighting their drone aerial photography services. Built entirely on WordPress and utilizing Elementor, this platform perfectly captures the essence of their sports club",
+        "category": "wordpress",
+        "link": ""
     },
     {
       "id": 3,
-      "image": "/assets/projects-img/1.png",
-      "title": "Shahadat Portfolio React Template",
-      "description": "React template for portfolio site.",
+      "images": [
+        "/assets/projects-img/qniko-html.png"
+    ],
+      "title": "Qniko - Startup Agency HTML5 Template With RTL Support",
+      "description": "Qniko is a creative, unique, clean Agency HTML5 Template. It is an excellent HTML template for Startup Agency, Mobile Appshowcase, software, Web Application, SEO Website, Portfolio Website, IT Solutions and Corporate website.",
+      "category": "sitetemplate",
+      "link": "/"
+      
+    },
+    {
+      "id": 2,
+      "images": [
+        "/assets/projects-img/interior-design.png"
+    ],
+      "title": "Interior Design - HTML5 Template for Business",
+      "description": "Interior Design – HTML5 Template for interior designer is perfect for interior designer, Decor, Architecture Business. It’s clean and creative elements which help you to build your Interior Business website.",
+      "category": "sitetemplate",
       "link": "/"
     },
     {
-        "id": 4,
-        "image": "/assets/projects-img/1.png",
-        "title": "More Portfolio will add soon",
-        "description": "",
+        "id": 1,
+        "images": [
+            "/assets/projects-img/1.png",
+            "/assets/projects-img/1.png",
+            "/assets/projects-img/1.png"
+        ],
+        "title": "More Portfolio Coming...",
+        "description": "I'm currently in the process of updating my portfolio because I have a lot of projects to organize. Once I've aligned and rearranged everything, I'll be uploading it step by step.",
+        "category": "wordpress",
         "link": ""
     }
   ]
