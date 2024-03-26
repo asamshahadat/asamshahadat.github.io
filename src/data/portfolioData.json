@@ -1,5 +1,17 @@
 [
     {
+        "id": 18,
+        "images": [
+            "/assets/projects-img/sweetch/1.png"
+
+      ],
+        "title": "Sweetch (Wordpress)",
+        "description": "Sweetch Energy wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
         "id": 17,
         "images": [
             "/assets/projects-img/joellechoe/1.png"

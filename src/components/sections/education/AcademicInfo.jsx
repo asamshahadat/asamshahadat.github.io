@@ -21,10 +21,10 @@ const AcademicInfo = () => {
                 <h3>Shahid Nagar M,A, Jalil High School</h3>
                 <p>Secondary School Certificate (SSC)</p>
             </div>
-            <div className="single-academic-info">
+            {/* <div className="single-academic-info">
                 <h3>Chandgaon Government Primary School </h3>
                 <p>Primary School Certificate (PSC)</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
