@@ -1,5 +1,39 @@
 [
     {
+        "id": 17,
+        "images": [
+            "/assets/projects-img/joellechoe/1.png"
+
+      ],
+        "title": "Joelle Choe (Wordpress)",
+        "description": "Joelle Choe is a personal portfolio wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 16,
+        "images": [
+            "/assets/projects-img/ourcalmchrysalis/1.png",
+            "/assets/projects-img/ourcalmchrysalis/2.png",
+            "/assets/projects-img/ourcalmchrysalis/3.png",
+            "/assets/projects-img/ourcalmchrysalis/4.png",
+            "/assets/projects-img/ourcalmchrysalis/5.png",
+            "/assets/projects-img/ourcalmchrysalis/6.png",
+            "/assets/projects-img/ourcalmchrysalis/7.png",
+            "/assets/projects-img/ourcalmchrysalis/8.png",
+            "/assets/projects-img/ourcalmchrysalis/9.png",
+            "/assets/projects-img/ourcalmchrysalis/10.png",
+            "/assets/projects-img/ourcalmchrysalis/11.png"
+
+      ],
+        "title": "Our Calm Chrysalis (Wordpress)",
+        "description": "OurCalmChrysalis offers relational sacred mindfulness practices that help us re-attach to unconscious lost parts of our soul — lost parts of our soul who long for expression. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
         "id": 15,
         "images": [
             "/assets/projects-img/baltvia/1.png",
