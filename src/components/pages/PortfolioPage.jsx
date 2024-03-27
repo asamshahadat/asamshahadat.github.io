@@ -8,7 +8,7 @@ const PortfolioPage = () => {
     <>
       <Header/>
       <div className="portfolio-page-wrapper">
-        <Portfolio/>
+        <Portfolio itemsPerPage={9}/>
       </div>
       <Footer/>
     </>
