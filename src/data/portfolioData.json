@@ -1,14 +1,137 @@
 [
+    {
+        "id": 39,
+        "images": [
+            "/assets/projects-img/lmcargo/1.png",
+            "/assets/projects-img/lmcargo/1.png",
+            "/assets/projects-img/lmcargo/1.png",
+            "/assets/projects-img/lmcargo/1.png",
+            "/assets/projects-img/lmcargo/1.png",
+            "/assets/projects-img/lmcargo/1.png",
+            "/assets/projects-img/lmcargo/1.png",
+            "/assets/projects-img/lmcargo/1.png"
+
+      ],
+        "title": "LM Cargo (Wordpress)",
+        "description": "LM Cargo is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 38,
+        "images": [
+            "/assets/projects-img/jigital/1.png",
+            "/assets/projects-img/jigital/2.png"
+
+      ],
+        "title": "Jigital (Wordpress)",
+        "description": "Jigital is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 37,
+        "images": [
+            "/assets/projects-img/janitexus/1.png",
+            "/assets/projects-img/janitexus/2.png",
+            "/assets/projects-img/janitexus/3.png",
+            "/assets/projects-img/janitexus/4.png"
+
+      ],
+        "title": "janitexus (Wordpress)",
+        "description": "Janitexus is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 36,
+        "images": [
+            "/assets/projects-img/blumconsulting/1.png"
+
+      ],
+        "title": "Blumconsulting (Wordpress)",
+        "description": "Blumconsulting is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 35,
+        "images": [
+            "/assets/projects-img/kotihost/1.png",
+            "/assets/projects-img/kotihost/2.png"
+
+      ],
+        "title": "Kotihost (Wordpress)",
+        "description": "Kotihost is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 34,
+        "images": [
+            "/assets/projects-img/upscalers/1.png",
+            "/assets/projects-img/upscalers/2.png",
+            "/assets/projects-img/upscalers/3.png",
+            "/assets/projects-img/upscalers/4.png",
+            "/assets/projects-img/upscalers/5.png"
+
+      ],
+        "title": "Upscalers (Wordpress)",
+        "description": "Upscalers is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 33,
+        "images": [
+            "/assets/projects-img/prontocv/1.png"
+
+      ],
+        "title": "ProntoCV (Wordpress)",
+        "description": "ProntoCV is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 32,
+        "images": [
+            "/assets/projects-img/sbg/1.png"
+
+      ],
+        "title": "SBG (Wordpress)",
+        "description": "SBG is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
     
+    {
+        "id": 31,
+        "images": [
+            "/assets/projects-img/pivot-consulting/1.png"
+
+      ],
+        "title": "Pivot Consulting (Wordpress)",
+        "description": "Pivot Consulting is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
     {
         "id": 30,
         "images": [
-            "/assets/projects-img/purple-blue/1.png",
-            "/assets/projects-img/purple-blue/2.png"
+            "/assets/projects-img/sweetch/1.png"
 
       ],
-        "title": "Purple Blue (Wordpress)",
-        "description": "Purple Blue is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "title": "Sweetch (Wordpress)",
+        "description": "Sweetch Energy is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
         "category": "wordpress",
         "project_type": "Freelance/Client Projects",
         "link": ""
@@ -61,17 +184,15 @@
     {
         "id": 26,
         "images": [
-            "/assets/projects-img/loulou/1.png",
-            "/assets/projects-img/loulou/2.png"
+            "/assets/projects-img/crh-sustainiblity-group/1.png"
 
       ],
-        "title": "Loulou (Wordpress)",
-        "description": "Loulou is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "title": "CRH Sustainiblity Group (Wordpress)",
+        "description": "CRS Sustainiblity Group is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
         "category": "wordpress",
         "project_type": "Freelance/Client Projects",
         "link": ""
     },
-    
     {
         "id": 25,
         "images": [
@@ -101,11 +222,12 @@
     {
         "id": 23,
         "images": [
-            "/assets/projects-img/crh-sustainiblity-group/1.png"
+            "/assets/projects-img/purple-blue/1.png",
+            "/assets/projects-img/purple-blue/2.png"
 
       ],
-        "title": "CRH Sustainiblity Group (Wordpress)",
-        "description": "CRS Sustainiblity Group is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "title": "Purple Blue (Wordpress)",
+        "description": "Purple Blue is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
         "category": "wordpress",
         "project_type": "Freelance/Client Projects",
         "link": ""
@@ -168,15 +290,16 @@
     {
         "id": 18,
         "images": [
-            "/assets/projects-img/sweetch/1.png"
+            "/assets/projects-img/loulou/1.png",
+            "/assets/projects-img/loulou/2.png"
 
       ],
-        "title": "Sweetch (Wordpress)",
-        "description": "Sweetch Energy wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "title": "Loulou (Wordpress)",
+        "description": "Loulou is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
         "category": "wordpress",
         "project_type": "Freelance/Client Projects",
         "link": ""
-    },
+    },  
     {
         "id": 17,
         "images": [
