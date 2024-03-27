@@ -1,6 +1,19 @@
 [
     
     {
+        "id": 30,
+        "images": [
+            "/assets/projects-img/purple-blue/1.png",
+            "/assets/projects-img/purple-blue/2.png"
+
+      ],
+        "title": "Purple Blue (Wordpress)",
+        "description": "Purple Blue is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
         "id": 29,
         "images": [
             "/assets/projects-img/baltvia/1.png",
@@ -11,8 +24,8 @@
             "/assets/projects-img/baltvia/6.png"
 
       ],
-        "title": "baltvia (Wordpress)",
-        "description": "Sustainable Supply-Chain Resources and Cooperation Site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "title": "Baltvia (Wordpress)",
+        "description": "Baltvia is an Wordpress Site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
         "category": "wordpress",
         "project_type": "Freelance/Client Projects",
         "link": ""
