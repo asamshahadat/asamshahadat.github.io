@@ -1,4 +1,157 @@
 [
+    
+    {
+        "id": 29,
+        "images": [
+            "/assets/projects-img/baltvia/1.png",
+            "/assets/projects-img/baltvia/2.png",
+            "/assets/projects-img/baltvia/3.png",
+            "/assets/projects-img/baltvia/4.png",
+            "/assets/projects-img/baltvia/5.png",
+            "/assets/projects-img/baltvia/6.png"
+
+      ],
+        "title": "baltvia (Wordpress)",
+        "description": "Sustainable Supply-Chain Resources and Cooperation Site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 28,
+        "images": [
+            "/assets/projects-img/sportdenkwerk/sportdenkwerk-1.png",
+            "/assets/projects-img/sportdenkwerk/sportdenkwerk-3.png",
+            "/assets/projects-img/sportdenkwerk/sportdenkwerk-2.png",
+            "/assets/projects-img/sportdenkwerk/sportdenkwerk-4.png",
+            "/assets/projects-img/sportdenkwerk/sportdenkwerk-5.png"
+
+      ],
+        "title": "Sportdenkwerkev (Wordpress)",
+        "description": "Enhancing Sports Club Visibility through Drone Aerial Photography. I'm proud to showcase a project where I fully developed a website for a client, highlighting their drone aerial photography services. Built entirely on WordPress and utilizing Elementor, this platform perfectly captures the essence of their sports club",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 27,
+        "images": [
+            "/assets/projects-img/prodoc-live/1.png"
+
+      ],
+        "title": "Prodoc Live (Wordpress)",
+        "description": "Prodoc Live is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 26,
+        "images": [
+            "/assets/projects-img/loulou/1.png",
+            "/assets/projects-img/loulou/2.png"
+
+      ],
+        "title": "Loulou (Wordpress)",
+        "description": "Loulou is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    
+    {
+        "id": 25,
+        "images": [
+            "/assets/projects-img/diettosuccess/1.png"
+
+      ],
+        "title": "Diet To Success (Wordpress)",
+        "description": "Diet To Success is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 24,
+        "images": [
+            "/assets/projects-img/national-radio-champ/1.png",
+            "/assets/projects-img/national-radio-champ/1.png",
+            "/assets/projects-img/national-radio-champ/3.png"
+
+      ],
+        "title": "National Radio Champ (Front-End)",
+        "description": "National Radio Champ is a music website. I'm proud to have fully developed both the front-end for user view and admin view for this project.",
+        "category": "frontend",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 23,
+        "images": [
+            "/assets/projects-img/crh-sustainiblity-group/1.png"
+
+      ],
+        "title": "CRH Sustainiblity Group (Wordpress)",
+        "description": "CRS Sustainiblity Group is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 22,
+        "images": [
+            "/assets/projects-img/neil-lambert/1.png"
+
+      ],
+        "title": "Iron Mind (Wordpress)",
+        "description": "Iron Mind is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 21,
+        "images": [
+            "/assets/projects-img/iron-mind/1.png"
+
+      ],
+        "title": "Iron Mind (Wordpress)",
+        "description": "Iron Mind is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 20,
+        "images": [
+            "/assets/projects-img/iptec/1.png",
+            "/assets/projects-img/iptec/2.png",
+            "/assets/projects-img/iptec/3.png"
+
+      ],
+        "title": "Iptec (Wordpress)",
+        "description": "iptec is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
+    {
+        "id": 19,
+        "images": [
+            "/assets/projects-img/foxhillarts/1.png",
+            "/assets/projects-img/foxhillarts/2.png",
+            "/assets/projects-img/foxhillarts/3.png",
+            "/assets/projects-img/foxhillarts/4.png",
+            "/assets/projects-img/foxhillarts/5.png",
+            "/assets/projects-img/foxhillarts/6.png"
+
+      ],
+        "title": "Foxhillarts (Wordpress)",
+        "description": "Foxhillarts Production is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
+    },
     {
         "id": 18,
         "images": [
@@ -48,16 +201,11 @@
     {
         "id": 15,
         "images": [
-            "/assets/projects-img/baltvia/1.png",
-            "/assets/projects-img/baltvia/2.png",
-            "/assets/projects-img/baltvia/3.png",
-            "/assets/projects-img/baltvia/4.png",
-            "/assets/projects-img/baltvia/5.png",
-            "/assets/projects-img/baltvia/6.png"
+            "/assets/projects-img/tutornomy/1.png"
 
       ],
-        "title": "baltvia (Wordpress)",
-        "description": "Sustainable Supply-Chain Resources and Cooperation Site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "title": "Tutornomy (Wordpress)",
+        "description": "Tutornomy is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
         "category": "wordpress",
         "project_type": "Freelance/Client Projects",
         "link": ""
@@ -65,15 +213,11 @@
     {
         "id": 14,
         "images": [
-            "/assets/projects-img/sportdenkwerk/sportdenkwerk-1.png",
-            "/assets/projects-img/sportdenkwerk/sportdenkwerk-3.png",
-            "/assets/projects-img/sportdenkwerk/sportdenkwerk-2.png",
-            "/assets/projects-img/sportdenkwerk/sportdenkwerk-4.png",
-            "/assets/projects-img/sportdenkwerk/sportdenkwerk-5.png"
+            "/assets/projects-img/strake/1.png"
 
       ],
-        "title": "Sportdenkwerkev (Wordpress)",
-        "description": "Enhancing Sports Club Visibility through Drone Aerial Photography. I'm proud to showcase a project where I fully developed a website for a client, highlighting their drone aerial photography services. Built entirely on WordPress and utilizing Elementor, this platform perfectly captures the essence of their sports club",
+        "title": "strake (Wordpress)",
+        "description": "strake is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
         "category": "wordpress",
         "project_type": "Freelance/Client Projects",
         "link": ""
