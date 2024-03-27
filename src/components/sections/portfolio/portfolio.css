@@ -77,9 +77,49 @@
     font-weight: 400;
 }
 
+.category-buttons {
+    position: relative;
+    margin: 10px auto 30px;
+    text-align: center;
+}
 
+.category-buttons button {
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    margin: 5px;
+    background-color: #925eff;
+    text-transform: capitalize;
+    border-radius: 5px;
+    display: inline-block;
+}
 
+.category-buttons button.active,.category-buttons button:hover {
+    background-color: #000;
+}
 
+.pagination {
+    position: relative;
+    margin: 40px auto 0px;
+}
+
+.pagination button {
+    position: relative;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 5px;
+    padding: 5px 12px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    min-width: 40px;
+}
+
+.pagination button.active,.pagination button:hover {
+    background-color: #000;
+}
 /* Portfolio Details CSS */
 .portfolio-details-page {
     position: relative;

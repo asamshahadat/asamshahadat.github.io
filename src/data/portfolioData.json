@@ -21,15 +21,14 @@
     {
         "id": 38,
         "images": [
-            "/assets/projects-img/jigital/1.png",
-            "/assets/projects-img/jigital/2.png"
-
-      ],
-        "title": "Jigital (Wordpress)",
-        "description": "Jigital is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
-        "category": "wordpress",
-        "project_type": "Freelance/Client Projects",
-        "link": ""
+            "/assets/projects-img/potolia.png"
+        ],
+        "title": "Potolia – Multipurpose Photography HTML Template",
+        "description": "The item is specially designed with LOVE for photographers of any kind ( wildlife, weeding, portfolio, Portrait Photography, Fine Art Photography, Fashion Photography, Photojournalism, Aerial Photography ). This template is suitable for fitness, health, meditation, membership, trainer, wellness, yoga, Yogi, timetable website. || This project was completed while I worked as an in-house developer at VoidCoders.",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
+        "link": "https://themeforest.net/item/potolia-multipurpose-photography-html-template/23895153"
+      
     },
     {
         "id": 37,
@@ -365,8 +364,8 @@
         ],
         "title": "Qniko - Startup Agency HTML5 Template With RTL Support",
         "description": "Qniko is a creative, unique, clean Agency HTML5 Template. It is an excellent HTML template for Startup Agency, Mobile Appshowcase, software, Web Application, SEO Website, Portfolio Website, IT Solutions and Corporate website.  || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/qniko-startup-agency-html5-template-with-rtl-support/27381608"
       
     },
@@ -377,8 +376,8 @@
         ],
         "title": "Dfoody – Restaurant HTML5 Template With RTL Support",
         "description": "Dfoody is a creative, unique, clean Restaurant & Food HTML5 Template. This template is exclusive for Restaurants, Fast Food, Bakery, Cafe, Food Shop, Tea/Coffee Shop, Seafood Restaurant, Catering, Food Business Website. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/dfoody-restaurant-html5-template-with-rtl-support/26163844"
       
     },
@@ -389,8 +388,8 @@
         ],
         "title": "Eventdia - Event and Conference HTML Template",
         "description": "Eventdia- Event and Conference Agency & Business Bootstrap4 HTML Template with RTL support is great choice for organizing meetings, seminars, food festivals, education conferences, venue or any other kind of event. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/eventdia-event-and-conference-html-template/25776796"
       
     },
@@ -401,8 +400,8 @@
         ],
         "title": "Grerbin – HTML5 Template For Law Firm With RTL Support",
         "description": "Grerbin HTML5 Template For Law Firm With RTL Support. Which helps you to build your own law firm site. Grerbin is specially designed for law firm, attorney, lawyer, any lawyer attorney Website. Approach with new trending design, focus on clean, modern and minimalist design, Grerbin will make your website look more impressive and attractive to viewers. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/grerbin-html5-template-for-law-firm-with-rtl-support/25741362"
       
     },
@@ -413,22 +412,23 @@
         ],
         "title": "Educus – HTML5 Template for Education and LMS With RTL Support",
         "description": "Educus HTML5 Template With RTL Support. Which helps you to build your own site. It is suitable for any course hub or any kind of educational institution. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/educus-html5-template-for-education-and-lms-with-rtl-support/25148415"
       
     },
     {
         "id": 8,
         "images": [
-            "/assets/projects-img/potolia.png"
-        ],
-        "title": "Potolia – Multipurpose Photography HTML Template",
-        "description": "The item is specially designed with LOVE for photographers of any kind ( wildlife, weeding, portfolio, Portrait Photography, Fine Art Photography, Fashion Photography, Photojournalism, Aerial Photography ). This template is suitable for fitness, health, meditation, membership, trainer, wellness, yoga, Yogi, timetable website. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
-        "link": "https://themeforest.net/item/potolia-multipurpose-photography-html-template/23895153"
-      
+            "/assets/projects-img/jigital/1.png",
+            "/assets/projects-img/jigital/2.png"
+
+      ],
+        "title": "Jigital (Wordpress)",
+        "description": "Jigital is an wordpress site. I'm proud to showcase a project where I fully developed a website for a client. Built entirely on WordPress and utilizing Elementor.",
+        "category": "wordpress",
+        "project_type": "Freelance/Client Projects",
+        "link": ""
     },
     {
         "id": 7,
@@ -437,8 +437,8 @@
         ],
         "title": "RexFit Fitness and Gym Html5 Template",
         "description": "RexFit HTML5 Template is a library for Health & Yoga with predefined web elements which helps you to build your own business site, a portfolio site or personal site. This template is suitable for fitness, health, meditation, membership, trainer, wellness, yoga, Yogi, timetable website. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/rexfit-gym-and-fitness-html5-template/24439944"
       
     },
@@ -449,8 +449,8 @@
         ],
         "title": "Astroke – Creative Agency HTML5 Template",
         "description": "Astroke Creative Agency HTML5 Template is designed perfectly in Bootstrap 4, CSS3, HTML5. This is an HTML Template design which is perfectly suited for Creative Agency. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/astroke-creative-agency-html5-template/23785564"
       
     },
@@ -461,8 +461,8 @@
         ],
         "title": "Sean – Saas, Software & App Landing Page HTML Template",
         "description": "Sean Saas, Software & App Landing Page HTML Template is designed perfectly in Bootstrap 4, SASS, CSS3, HTML5. This is HTML Template design which is perfectly suited for Software & App Landing Page, Showcase template. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/sean-saas-software-app-landing-page-html-template/23279487"
       
     },
@@ -473,8 +473,8 @@
         ],
         "title": "Footsteps Travel Blog HTML Template",
         "description": "Footsteps Travel Blog HTML Template is designed perfectly in Bootstrap 4, CSS3, HTML5. This is HTML Template design which is perfectly suited for Personal Blog Page, Showcase, travel website, travel product selling. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/footsteps-travel-blog-html-template/22880669"
       
     },
@@ -485,8 +485,8 @@
         ],
         "title": "Fitgear App Landing HTML5 Template",
         "description": "Fitgear App Landing HTML5 Template is designed perfectly in Bootstrap 4, CSS3, HTML5. This is One Page PSD Template design which is perfectly suited for App landing page, App Showcase template, App website. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/fitgear-app-landing-html5-template/22587386"
       
     },
@@ -497,8 +497,8 @@
         ],
         "title": "Interior Design - HTML5 Template for Business",
         "description": "Interior Design – HTML5 Template for interior designer is perfect for interior designer, Decor, Architecture Business. It’s clean and creative elements which help you to build your Interior Business website. || This project was completed while I worked as an in-house developer at VoidCoders.",
-        "category": "sitetemplate",
-        "project_type": "Employment/In-house Projects",
+        "category": "frontend",
+        "project_type": "Employment/In-house Projects(Site Template)",
         "link": "https://themeforest.net/item/interior-design-html5-template-for-interior-designer/21071409"
     },
     {
