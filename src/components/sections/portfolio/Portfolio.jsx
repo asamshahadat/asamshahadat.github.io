@@ -86,7 +86,7 @@ const Portfolio = () => {
             <div key={item.id} className="single-portfolio-list">
               {item.images && <img src={item.images[0]} alt={item.title} />}
               {item.title && <h4>{item.title}</h4>}
-              {item.category && <h4>{item.category}</h4>}
+              {/* {item.category && <h4>{item.category}</h4>} */}
               {/* {item.description && <p>{item.description}</p>} */}
               {item.description && <p>{truncateString(item.description, 125)}</p>}
               {item.id && <Link to={`/portfolio/${item.id}`}>Details</Link>}
