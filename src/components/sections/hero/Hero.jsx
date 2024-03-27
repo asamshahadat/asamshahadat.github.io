@@ -31,7 +31,7 @@ const Hero = () => {
           <h4>Hello, I’m -</h4>
           <h2>S M Shahadat Hossain</h2>
           <p>A software engineer who uses his knowledge of programming languages, software development processes, and computer science principles to design, develop, and maintain software systems.</p>
-          <Link to="#portfolio" className="btn-style-a">Portfolio</Link>
+          <Link to="/portfolio" className="btn-style-a">Portfolio</Link>
         </div>
       </div>
     </div>
