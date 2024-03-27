@@ -10,7 +10,7 @@ const Portfolio = () => {
   const [categories, setCategories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   //   const [itemsPerPage, setItemsPerPage] = useState(9);
-  const itemsPerPage = 9;
+  const itemsPerPage = 6;
   const [currentCategory, setCurrentCategory] = useState('All'); // New state for current category
 //   const portfolioCount = portfolioData.length;
   useEffect(() => {
@@ -65,7 +65,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="portfolio-area">
+    <div className="portfolio-area" id="portfolio">
       <img src={portfolioBg} className='portfolio-bg' alt="" />
       <div className="container">
         <div className="portfolio-title">

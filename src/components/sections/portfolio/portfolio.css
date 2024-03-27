@@ -1,6 +1,9 @@
+.portfolio-page-wrapper {
+    padding-top: 80px;
+}
 .portfolio-area {
     position: relative;
-    padding: 200px 0px 100px;
+    padding: 100px 10px;
     text-align: center;
 }
 

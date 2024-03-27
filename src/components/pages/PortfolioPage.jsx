@@ -7,7 +7,9 @@ const PortfolioPage = () => {
   return (
     <>
       <Header/>
-      <Portfolio/>
+      <div className="portfolio-page-wrapper">
+        <Portfolio/>
+      </div>
       <Footer/>
     </>
   );

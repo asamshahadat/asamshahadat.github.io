@@ -1,11 +1,11 @@
 .skill-area {
     position: relative;
-    padding-bottom: 60px;
+    padding: 120px 10px;
 }
 
 .skills-wrapper {
     position: relative;
-    margin: 0px auto 60px;
+    margin: 0px auto;
 }
 
 .skills-wrapper img.skill-bg {
