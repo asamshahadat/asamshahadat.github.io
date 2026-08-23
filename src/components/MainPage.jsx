@@ -13,8 +13,8 @@ const MainPageContent = () => {
       <Header/>
       <Hero/>
       <WhoIam/>
-      <AcademicInfo/>
       <Portfolio/>
+      <AcademicInfo/>
       <Skill/>
       <Expert/>
       <Footer/>

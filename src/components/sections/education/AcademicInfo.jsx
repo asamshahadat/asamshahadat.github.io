@@ -2,7 +2,35 @@ import './academic.css';
 // import { Link } from 'react-router-dom';
 const AcademicInfo = () => {
   return (
-    <div className="education-area flex justify-center items-center">
+    <div className="education-area justify-center items-center">
+      <div className="portfolio-experience">
+        <div className="container">
+          <div className="academic-wrapper flex justify-between gap-10 flex-col md:flex-row p-20">
+            <div className="academic-title md:w-1/2 text-center">
+              <h2 className="left-long-line">Professional Experience</h2>
+            </div>
+            <div className="academic-details md:w-1/2 text-left flex flex-col justify-center">
+              <div className="single-academic-info">
+                  <h3>Incsub / CampusPress</h3>
+                  <p>Site Specialist → Site & Support Specialist</p>
+                  <p>Apr 2024 – Aug 2026</p>
+              </div>
+              <div className="single-academic-info">
+                  <h3>UI Barn — Technical Lead</h3>
+                  <p>Apr 2024 – Aug 2026</p>
+              </div>
+              <div className="single-academic-info">
+                  <h3>Luminous Labs — Software Engineer</h3>
+                  <p>Apr 2024 – Aug 2026</p>
+              </div>
+              <div className="single-academic-info">
+                  <h3>VoidCoders — Software Engineer</h3>
+                  <p>Apr 2024 – Aug 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="academic-wrapper flex justify-between gap-10 flex-col md:flex-row p-20">
           <div className="academic-title md:w-1/2 text-center">
@@ -28,6 +56,7 @@ const AcademicInfo = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

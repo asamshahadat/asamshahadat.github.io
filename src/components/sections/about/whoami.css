@@ -30,7 +30,11 @@
     margin: 15px auto;
 }
 
-
+a.btn-style-a.resume-btn {
+    width: max-content;
+    background-color: #925eff;
+    border-radius: 5px;
+}
 @media screen and (max-width: 1023px) { 
     
     .who-img-text-wrapper {

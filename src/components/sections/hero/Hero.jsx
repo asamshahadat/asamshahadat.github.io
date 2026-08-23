@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="hero-text">
           <h4>Hello, I’m -</h4>
           <h2>S M Shahadat Hossain</h2>
-          <p>A software engineer who uses his knowledge of programming languages, software development processes, and computer science principles to design, develop, and maintain software systems.</p>
+          <p>WordPress & Front-End Developer with 8+ years of web development experience, specializing in modern WordPress development, Gutenberg/FSE, website migrations, responsive front-end development, and technical troubleshooting.</p>
           <Link to="/portfolio" className="btn-style-a">Portfolio</Link>
         </div>
       </div>
