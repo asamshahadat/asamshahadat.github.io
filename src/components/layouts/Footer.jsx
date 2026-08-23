@@ -2,7 +2,6 @@
 import "./css/footer.css";  
 import { Link } from "react-router-dom";
 import footerBg from '../../assets/img/shape/footer-bg.png';
-import skypeIcon from '../../assets/img/icon/skype.png';
 import twitterIcon from '../../assets/img/icon/twitter.png';
 import linkedlnIcon from '../../assets/img/icon/linkedln.png';
 import githubIcon from '../../assets/img/icon/github.png';
