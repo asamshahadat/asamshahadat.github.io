@@ -46,7 +46,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <Link to="https://www.linkedin.com/in/asamshahadat/" target="_blank">
-                                <img src={linkedlnIcon} alt="" />
+                                <img src={linkedlnIcon} alt="" /> 
                             </Link>
                         </li>
                         
