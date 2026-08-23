@@ -49,11 +49,7 @@ const Footer = () => {
                                 <img src={linkedlnIcon} alt="" />
                             </Link>
                         </li>
-                        <li>
-                            <Link to="skype:asamshahadat? chat" target="_blank">
-                                <img src={skypeIcon} alt="" />
-                            </Link>
-                        </li>
+                        
                     </ul>
                 </div>
                 <div className="footer-copyright">
