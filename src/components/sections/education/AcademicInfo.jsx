@@ -17,15 +17,15 @@ const AcademicInfo = () => {
               </div>
               <div className="single-academic-info">
                   <h3>UI Barn — Technical Lead</h3>
-                  <p>Apr 2024 – Aug 2026</p>
+                  <p>Apr 2023 – Apr 2024</p>
               </div>
               <div className="single-academic-info">
                   <h3>Luminous Labs — Software Engineer</h3>
-                  <p>Apr 2024 – Aug 2026</p>
+                  <p>Feb 2021 - Apr 2023</p>
               </div>
               <div className="single-academic-info">
                   <h3>VoidCoders — Software Engineer</h3>
-                  <p>Apr 2024 – Aug 2026</p>
+                  <p>Sep 2018 - Jan 2021</p>
               </div>
             </div>
           </div>
