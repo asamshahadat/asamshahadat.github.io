@@ -7,9 +7,10 @@ const Expert = () => {
       <img src={expertBg} className='expert-bg' alt="" />
       <div className="container">
         <div className="expert-title">
-            <h2>Expert In</h2>
+            <h2>What I Do</h2>
         </div>
         <div className="expert-contents">
+            
             <div className="single-expert-list">
                 <h3>01</h3>
                 <h4>Bug Fixing (HTML/CSS/JS/PHP)</h4>
@@ -28,23 +29,43 @@ const Expert = () => {
             </div>
             <div className="single-expert-list">
                 <h3>05</h3>
-                <h4>Elementor Widget Development</h4>
+                <h4>Gutenberg / FSE Development</h4>
             </div>
             <div className="single-expert-list">
                 <h3>06</h3>
-                <h4>Wordpress Site Specialist</h4>
+                <h4>Website Migration</h4>
             </div>
             <div className="single-expert-list">
                 <h3>07</h3>
-                <h4>Site Template Development</h4>
+                <h4>Elementor Widget Development</h4>
             </div>
             <div className="single-expert-list">
                 <h3>08</h3>
-                <h4>Microweber Template Development</h4>
+                <h4>Wordpress Site Specialist</h4>
             </div>
             <div className="single-expert-list">
                 <h3>09</h3>
+                <h4>Site Template Development</h4>
+            </div>
+            <div className="single-expert-list">
+                <h3>10</h3>
+                <h4>Technical Troubleshooting</h4>
+            </div>
+            <div className="single-expert-list">
+                <h3>11</h3>
+                <h4>WordPress Technical Support</h4>
+            </div>
+            <div className="single-expert-list">
+                <h3>12</h3>
+                <h4>Microweber Template Development</h4>
+            </div>
+            <div className="single-expert-list">
+                <h3>13</h3>
                 <h4>Laravel Website Development</h4>
+            </div>
+            <div className="single-expert-list">
+                <h3>14</h3>
+                <h4>AI-Assisted Development</h4>
             </div>
         </div>
       </div>
