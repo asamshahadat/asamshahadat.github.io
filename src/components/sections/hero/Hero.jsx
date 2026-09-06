@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className="hero-area flex justify-center">
+    <div className="hero-area flex justify-center" id="home">
       <img src={heroBgShape} className='hero-bg-shape' alt="" />
       <div className="hero-vectors">
         <img src={heroVectorImg} alt="" />

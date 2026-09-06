@@ -1,11 +1,39 @@
 // import logo from '../logo.svg';
 import "././css/header.css";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
+import { Link as RouterLink, NavLink, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import React, { useState } from "react";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../elements/icons";
 
+const SectionLink = ({ sectionId, children, onClick }) => {
+    const { pathname } = useLocation();
 
+    if (pathname === "/") {
+        return (
+            <ScrollLink
+                to={sectionId}
+                smooth={true}
+                duration={500}
+                spy={true}
+                className="nav-links"
+                onClick={onClick}
+                activeClass="active"
+            >
+                {children}
+            </ScrollLink>
+        );
+    }
+
+    return (
+        <RouterLink
+            to={{ pathname: "/", hash: `#${sectionId}` }}
+            className="nav-links"
+            onClick={onClick}
+        >
+            {children}
+        </RouterLink>
+    );
+};
 
 const Header = () => {
     const [click, setClick] = useState(false);
@@ -23,19 +51,19 @@ const Header = () => {
                 </NavLink>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className="nav-item">
-                        <NavLink to="/" activeclassname="active" className="nav-links" onClick={handleClick} >
+                        <SectionLink sectionId="home" onClick={handleClick}>
                             Home
-                        </NavLink>
+                        </SectionLink>
                     </li>
                     <li className="nav-item">
-                        <Link to="about" smooth={true} duration={500} spy={true} className="nav-links" onClick={handleClick} activeClass="active">
+                        <SectionLink sectionId="about" onClick={handleClick}>
                             About
-                        </Link>
+                        </SectionLink>
                     </li>
                     <li className="nav-item">
-                        <Link to="expert" smooth={true} duration={500} spy={true} className="nav-links" onClick={handleClick} activeClass="active">
+                        <SectionLink sectionId="expert" onClick={handleClick}>
                             Expertise
-                        </Link>
+                        </SectionLink>
                     </li>
                     <li className="nav-item">
                         <NavLink
@@ -47,12 +75,9 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        {/* <NavLink to="/contact" activeclassname="active" className="nav-links" onClick={handleClick} >
-                            Contact
-                        </NavLink> */}
-                        <Link to="footer" smooth={true} duration={500} spy={true} className="nav-links" onClick={handleClick} activeClass="active">
+                        <SectionLink sectionId="footer" onClick={handleClick}>
                             Find Me
-                        </Link>
+                        </SectionLink>
                     </li>
                 </ul>
                 <div className="nav-icon" onClick={handleClick}>
