@@ -38,12 +38,13 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        {/* <NavLink  to="/portfolio" activeclassname="active" className="nav-links" onClick={handleClick} >
+                        <NavLink
+                            to="/portfolio"
+                            className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}
+                            onClick={handleClick}
+                        >
                             Portfolio
-                        </NavLink> */}
-                        <Link to="portfolio" smooth={true} duration={500} spy={true} className="nav-links" onClick={handleClick} activeClass="active">
-                            Portfolio
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className="nav-item">
                         {/* <NavLink to="/contact" activeclassname="active" className="nav-links" onClick={handleClick} >
