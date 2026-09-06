@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.5e68ef2d.css",
-    "main.js": "/static/js/main.3497c1d2.js",
+    "main.js": "/static/js/main.3c4ba2a3.js",
     "static/js/453.50677dfa.chunk.js": "/static/js/453.50677dfa.chunk.js",
     "static/media/hero-bg-shape.png": "/static/media/hero-bg-shape.b3d61b3af52c4f482214.png",
-    "static/media/shahadat.png": "/static/media/shahadat.c59168b668353349a613.png",
+    "static/media/shahadat.png": "/static/media/shahadat.39d6a07dfcbdd5032a30.png",
     "static/media/skills-bg.png": "/static/media/skills-bg.2ed17ff20851c3cbb255.png",
     "static/media/expertin-bg.png": "/static/media/expertin-bg.70e4193e83b873f14ca6.png",
     "static/media/footer-bg.png": "/static/media/footer-bg.1b09d1f926593de8cfe9.png",
@@ -12,11 +12,11 @@
     "static/media/hero-vector-2.png": "/static/media/hero-vector-2.1b46c33b7b160e0c266f.png",
     "index.html": "/index.html",
     "main.5e68ef2d.css.map": "/static/css/main.5e68ef2d.css.map",
-    "main.3497c1d2.js.map": "/static/js/main.3497c1d2.js.map",
+    "main.3c4ba2a3.js.map": "/static/js/main.3c4ba2a3.js.map",
     "453.50677dfa.chunk.js.map": "/static/js/453.50677dfa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e68ef2d.css",
-    "static/js/main.3497c1d2.js"
+    "static/js/main.3c4ba2a3.js"
   ]
 }
