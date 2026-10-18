@@ -1,100 +1,168 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import portfolioData from '../../../data/portfolioData.json';
 import './portfolio.css';
-import portfolioBg from '../../../assets/img/shape/expertin-bg.png';
+import { BracesIcon, CodeLineIcon } from '../../elements/icons';
+
+const ALL = 'All';
+const categories = [...new Set(portfolioData.map(item => item.category))];
+const CATEGORY_LABELS = { wordpress: 'WordPress', frontend: 'Frontend' };
+
+// Display order for the industry filter
+const INDUSTRIES = [
+  'Real Estate & Home',
+  'Business & Professional',
+  'Tech & SaaS',
+  'Health & Wellness',
+  'Education & Coaching',
+  'Industry & Energy',
+  'Travel & Hospitality',
+  'Creative & Media',
+  'E-commerce',
+  'Local Services',
+];
+
+function truncateString(str, maxLength) {
+  if (str.length > maxLength) {
+    return str.substring(0, maxLength) + '...';
+  } else {
+    return str;
+  }
+}
+
+// Page numbers with gaps, e.g. 1 … 4 5 6 … 10
+function getPageItems(current, total) {
+  const pages = new Set([1, total, current - 1, current, current + 1]);
+  const sorted = [...pages].filter(page => page >= 1 && page <= total).sort((a, b) => a - b);
+  return sorted.flatMap((page, index) => (
+    index > 0 && page - sorted[index - 1] > 1 ? [`gap-${page}`, page] : [page]
+  ));
+}
 
 const Portfolio = ({ itemsPerPage = 6 }) => { // Set default value for itemsPerPage
-  const [portfolio, setPortfolio] = useState([]);
-  const [filteredPortfolio, setFilteredPortfolio] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentCategory, setCurrentCategory] = useState('All');
+  // Only one filter is active at a time: All, a technology, or an industry
+  const [activeFilter, setActiveFilter] = useState({ type: ALL, value: ALL });
 
-  useEffect(() => {
-    setPortfolio(portfolioData);
-    const uniqueCategories = [...new Set(portfolioData.map(item => item.category))];
-    setCategories(uniqueCategories);
-    setFilteredPortfolio(portfolioData);
-  }, []);
+  const filters = useMemo(() => [
+    { type: ALL, value: ALL, label: ALL, count: portfolioData.length },
+    ...categories.map(category => ({
+      type: 'category',
+      value: category,
+      label: CATEGORY_LABELS[category] || category,
+      count: portfolioData.filter(item => item.category === category).length,
+    })),
+    ...INDUSTRIES.map(industry => ({
+      type: 'industry',
+      value: industry,
+      label: industry,
+      count: portfolioData.filter(item => item.industry === industry).length,
+    })).filter(filter => filter.count > 0),
+  ], []);
 
-  function truncateString(str, maxLength) {
-    if (str.length > maxLength) {
-      return str.substring(0, maxLength) + '...';
-    } else {
-      return str;
-    }
-  }
+  const filteredPortfolio = useMemo(
+    () => activeFilter.type === ALL
+      ? portfolioData
+      : portfolioData.filter(item => item[activeFilter.type] === activeFilter.value),
+    [activeFilter]
+  );
 
-  const filterPortfolioByCategory = category => {
-    setCurrentCategory(category);
-    if (category === 'All') {
-      setFilteredPortfolio(portfolio);
-    } else {
-      const filteredItems = portfolio.filter(item => item.category === category);
-      setFilteredPortfolio(filteredItems);
-    }
-    setCurrentPage(1);
-  };
-
+  const totalPages = Math.ceil(filteredPortfolio.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredPortfolio.slice(indexOfFirstItem, indexOfLastItem);
 
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+  const isActive = filter => filter.type === activeFilter.type && filter.value === activeFilter.value;
 
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
+  const selectFilter = filter => {
+    setActiveFilter({ type: filter.type, value: filter.value });
+    setCurrentPage(1);
   };
 
-  const nextPage = () => {
-    if (currentPage < Math.ceil(filteredPortfolio.length / itemsPerPage)) {
-      setCurrentPage(currentPage + 1);
+  // Changing page keeps the grid in view instead of leaving the reader at the pagination bar
+  const goToPage = pageNumber => {
+    if (pageNumber < 1 || pageNumber > totalPages || pageNumber === currentPage) {
+      return;
     }
+    setCurrentPage(pageNumber);
+    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
-    <div className="portfolio-area" id="portfolio">
-      <img src={portfolioBg} className='portfolio-bg' alt="" />
+    <section className="portfolio-area" id="portfolio">
+      <span className="decor-blob portfolio-blob" aria-hidden="true" />
+      <span className="decor-blob portfolio-blob portfolio-blob--warm" aria-hidden="true" />
+      <span className="decor-watermark portfolio-watermark portfolio-watermark--braces" aria-hidden="true"><BracesIcon /></span>
+      <span className="decor-watermark portfolio-watermark portfolio-watermark--code" aria-hidden="true"><CodeLineIcon /></span>
       <div className="container">
         <div className="portfolio-title">
           <h2>Portfolio</h2>
         </div>
-        <div className="category-buttons">
-          <button className={currentCategory === 'All' ? 'active' : ''} onClick={() => filterPortfolioByCategory('All')}>All</button>
-          {categories.map((category, index) => (
-            <button key={index} className={currentCategory === category ? 'active' : ''} onClick={() => filterPortfolioByCategory(category)}>
-              {category}
-            </button>
-          ))}
-        </div>
-        <div className="portfolio-contents">
-          {currentItems.map(item => (
-            <div key={item.id} className="single-portfolio-list">
-              {item.images && <img src={item.images[0]} alt={item.title} />}
-              {item.title && <h4>{item.title}</h4>}
-              {item.description && <p>{truncateString(item.description, 125)}</p>}
-              {item.id && <Link to={`/portfolio/${item.id}`}>Details</Link>}
-            </div>
-          ))}
-        </div>
-        <div className="pagination">
-          <button onClick={prevPage}>Prev</button>
-          {Array.from({ length: Math.ceil(filteredPortfolio.length / itemsPerPage) }).map((_, index) => (
+
+        <div className="portfolio-filters" role="group" aria-label="Filter projects">
+          {filters.map(filter => (
             <button
-              key={index}
-              onClick={() => paginate(index + 1)}
-              className={currentPage === index + 1 ? 'active' : ''}
+              key={`${filter.type}-${filter.value}`}
+              type="button"
+              className={isActive(filter) ? 'active' : ''}
+              aria-pressed={isActive(filter)}
+              onClick={() => selectFilter(filter)}
             >
-              {index + 1}
+              {filter.label}
+              {filter.type !== ALL && <span className="chip-count">{filter.count}</span>}
             </button>
           ))}
-          <button onClick={nextPage}>Next</button>
         </div>
+
+        {currentItems.length > 0 ? (
+          <div className="portfolio-contents">
+            {currentItems.map((item, index) => (
+              <article key={item.id} className="single-portfolio-list" style={{ '--i': index }}>
+                {item.images && (
+                  <div className="portfolio-card-media">
+                    <img src={item.images[0]} alt={item.title} width="800" height="500" loading="lazy" decoding="async" />
+                    {item.industry && <span className="portfolio-card-badge">{item.industry}</span>}
+                  </div>
+                )}
+                <div className="portfolio-card-body">
+                  {item.title && <h3>{item.title}</h3>}
+                  {item.description && <p>{truncateString(item.description, 125)}</p>}
+                  {item.id && (
+                    <Link to={`/portfolio/${item.id}`} className="portfolio-card-link">
+                      Details <span aria-hidden="true">→</span>
+                    </Link>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p className="portfolio-empty">No projects found for this filter.</p>
+        )}
+
+        {totalPages > 1 && (
+          <nav className="pagination" aria-label="Portfolio pages">
+            <button type="button" onClick={() => goToPage(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
+            {getPageItems(currentPage, totalPages).map(page => (
+              typeof page === 'string' ? (
+                <span key={page} className="pagination-gap" aria-hidden="true">…</span>
+              ) : (
+                <button
+                  key={page}
+                  type="button"
+                  onClick={() => goToPage(page)}
+                  className={currentPage === page ? 'active' : ''}
+                  aria-current={currentPage === page ? 'page' : undefined}
+                >
+                  {page}
+                </button>
+              )
+            ))}
+            <button type="button" onClick={() => goToPage(currentPage + 1)} disabled={currentPage === totalPages}>Next</button>
+          </nav>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

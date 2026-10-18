@@ -1,46 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Footer from '../layouts/Footer';
 import Header from '../layouts/Header';
-import Masonry from 'react-masonry-css';
 import portfolioData from '../../data/portfolioData.json';
-import portfolioBg from '../../assets/img/shape/expertin-bg.png';
+import './portfolio-detail.css';
+import usePageMeta from '../elements/usePageMeta';
+import useReveal from '../elements/useReveal';
 
 const PortfolioDetailPage = () => {
   const { id } = useParams();
-  const [portfolioItem, setPortfolioItem] = useState(null);
+  const portfolioItem = portfolioData.find(item => item.id === parseInt(id));
 
-  useEffect(() => {
-    const item = portfolioData.find(item => item.id === parseInt(id));
-    setPortfolioItem(item);
-  }, [id]);
-
-  if (!portfolioItem) {
-    return <div>Loading...</div>;
-  }
+  usePageMeta(portfolioItem
+    ? { title: portfolioItem.title, description: portfolioItem.description || undefined, path: `/portfolio/${portfolioItem.id}` }
+    : { title: 'Project not found', path: '/portfolio' });
+  useReveal();
 
   return (
     <>
       <Header />
-      <div className="portfolio-area portfolio-details-page">
-          <img src={portfolioBg} className='portfolio-bg' alt="" />
-          <div className="portfolio-detail">
-            {portfolioItem.title && <h2>{portfolioItem.title}</h2>}
-            <Masonry
-              breakpointCols={{ default: 2, 1100: 2, 700: 1 }}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column"
-            >
-              {portfolioItem.images && portfolioItem.images.map((image, index) => (
-                <div key={index} className="image-item">
-                  <img src={image} alt={`${index}`} />
+      <main className="portfolio-details-page">
+        <div className="container">
+          {portfolioItem ? (
+            <article className="portfolio-detail">
+              <header className="portfolio-detail-header">
+                {portfolioItem.project_type && <p className="portfolio-detail-type">{portfolioItem.project_type}</p>}
+                {portfolioItem.title && <h1>{portfolioItem.title}</h1>}
+              </header>
+              {portfolioItem.images && (
+                <div className={portfolioItem.images.length === 1 ? "portfolio-gallery portfolio-gallery--single" : "portfolio-gallery"}>
+                  {portfolioItem.images.map((image, index) => (
+                    <div key={index} className="image-item">
+                      <img
+                        src={image}
+                        alt={`${portfolioItem.title} screenshot ${index + 1}`}
+                        loading={index < 2 ? 'eager' : 'lazy'}
+                        fetchpriority={index === 0 ? 'high' : 'auto'}
+                        decoding="async"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </Masonry>
-            {portfolioItem.description && <p>{portfolioItem.description}</p>}
-            {portfolioItem.link && <Link to={portfolioItem.link}>View Live Site</Link>}
-          </div>
-      </div>
+              )}
+              {portfolioItem.description && <p className="portfolio-detail-description">{portfolioItem.description}</p>}
+              {portfolioItem.link && (
+                <a href={portfolioItem.link} target="_blank" rel="noopener noreferrer" className="btn-style-a btn-accent">
+                  View Live Site
+                </a>
+              )}
+            </article>
+          ) : (
+            <div className="portfolio-detail portfolio-detail-missing">
+              <h1>Project not found.</h1>
+              <Link to="/portfolio" className="btn-style-a btn-accent">Portfolio</Link>
+            </div>
+          )}
+        </div>
+      </main>
       <Footer />
     </>
   );

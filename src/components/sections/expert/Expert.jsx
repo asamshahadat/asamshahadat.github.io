@@ -1,75 +1,47 @@
-import './expert.css';   
-import expertBg from '../../../assets/img/shape/expertin-bg.png';
+import './expert.css';
+import { BracesIcon, CodeLineIcon, SparkleIcon } from '../../elements/icons';
+
+const services = [
+  'Bug Fixing (HTML/CSS/JS/PHP)',
+  'Front End Development',
+  'Wordpress Theme Development',
+  'Wordpress Plugin Development',
+  'Gutenberg / FSE Development',
+  'Website Migration',
+  'Elementor Widget Development',
+  'Wordpress Site Specialist',
+  'Site Template Development',
+  'Technical Troubleshooting',
+  'WordPress Technical Support',
+  'Microweber Template Development',
+  'Laravel Website Development',
+  'AI-Assisted Development',
+];
 
 const Expert = () => {
   return (
-    <div className="expert-in-area" id="expert" >
-      <img src={expertBg} className='expert-bg' alt="" />
+    <section className="expert-in-area" id="expert" aria-labelledby="expert-title">
+      <span className="decor-dots expert-dots expert-dots--top" aria-hidden="true" />
+      <span className="decor-dots expert-dots expert-dots--bottom" aria-hidden="true" />
+      <span className="decor-watermark expert-watermark" aria-hidden="true"><BracesIcon /></span>
       <div className="container">
-        <div className="expert-title">
-            <h2>What I Do</h2>
+        <div className="expert-title reveal">
+            <h2 id="expert-title">What I Do</h2>
         </div>
-        <div className="expert-contents">
-            
-            <div className="single-expert-list">
-                <h3>01</h3>
-                <h4>Bug Fixing (HTML/CSS/JS/PHP)</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>02</h3>
-                <h4>Front End Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>03</h3>
-                <h4>Wordpress Theme Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>04</h3>
-                <h4>Wordpress Plugin Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>05</h3>
-                <h4>Gutenberg / FSE Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>06</h3>
-                <h4>Website Migration</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>07</h3>
-                <h4>Elementor Widget Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>08</h3>
-                <h4>Wordpress Site Specialist</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>09</h3>
-                <h4>Site Template Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>10</h3>
-                <h4>Technical Troubleshooting</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>11</h3>
-                <h4>WordPress Technical Support</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>12</h3>
-                <h4>Microweber Template Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>13</h3>
-                <h4>Laravel Website Development</h4>
-            </div>
-            <div className="single-expert-list">
-                <h3>14</h3>
-                <h4>AI-Assisted Development</h4>
-            </div>
-        </div>
+        <ol className="expert-contents">
+            {services.map((service, index) => (
+              <li key={service} className="single-expert-list reveal" style={{ '--reveal-delay': `${(index % 4) * 70}ms` }}>
+                  <span className="expert-card-top">
+                    <span className="expert-number">{String(index + 1).padStart(2, '0')}</span>
+                    {index === 0 && <span className="expert-icon" aria-hidden="true"><CodeLineIcon /></span>}
+                    {index === services.length - 1 && <span className="expert-icon" aria-hidden="true"><SparkleIcon /></span>}
+                  </span>
+                  <h3>{service}</h3>
+              </li>
+            ))}
+        </ol>
       </div>
-    </div>
+    </section>
   );
 };
 

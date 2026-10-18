@@ -1,4 +1,3 @@
-import '../App.css';   
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Footer from './layouts/Footer';
@@ -9,8 +8,13 @@ import Expert from './sections/expert/Expert';
 import Hero from './sections/hero/Hero';
 import Portfolio from './sections/portfolio/Portfolio';
 import Skill from './sections/skills/Skill';
+import usePageMeta from './elements/usePageMeta';
+import useReveal from './elements/useReveal';
+
 const MainPageContent = () => {
   const { hash } = useLocation();
+  usePageMeta({});
+  useReveal();
 
   useEffect(() => {
     if (!hash) {
@@ -27,12 +31,14 @@ const MainPageContent = () => {
   return (
     <>
       <Header/>
-      <Hero/>
-      <WhoIam/>
-      <Portfolio/>
-      <AcademicInfo/>
-      <Skill/>
-      <Expert/>
+      <main>
+        <Hero/>
+        <WhoIam/>
+        <Portfolio/>
+        <AcademicInfo/>
+        <Skill/>
+        <Expert/>
+      </main>
       <Footer/>
     </>
   );

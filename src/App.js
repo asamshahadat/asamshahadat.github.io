@@ -6,11 +6,13 @@ import {
 import MainPageContent from "./components/MainPage";
 import PortfolioPage from "./components/pages/PortfolioPage"; 
 import PortfolioDetailPage from "./components/pages/PortfolioDetailPage";
+import ScrollToTop from "./components/elements/ScrollToTop";
 
 const App = () => {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Routes> 
             <Route path="/" element={<MainPageContent />} /> 
             <Route path="/portfolio" element={<PortfolioPage />} /> 

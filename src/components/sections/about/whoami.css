@@ -1,54 +1,190 @@
 .who-area {
     position: relative;
+    overflow: hidden;
+    padding: var(--section-space) 0;
+}
+
+.who-img-text-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: clamp(2.5rem, 1.5rem + 4vw, 5rem);
 }
 
 .whoi-img {
     position: relative;
-    padding: 80px 0px;
+    isolation: isolate;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 0 24px 24px 0;
 }
 
-.whoi-img img.whoimbgshape {
+/* Soft neon glow behind the photo */
+.whoi-glow {
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+    inset: 12%;
+    z-index: -2;
+    background: var(--gradient-neon);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.45;
+    animation: drift 14s ease-in-out infinite alternate;
 }
 
+/* Offset outline frame for a layered look */
+.whoi-frame {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border: 2px solid var(--violet-200);
+    border-radius: var(--radius-xl);
+}
+
+.whoi-dots {
+    top: -22px;
+    left: -22px;
+    width: 120px;
+    height: 120px;
+    z-index: -2;
+}
+
+.whoi-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg), 0 30px 60px -30px var(--neon-glow);
+}
+
+/* Fine inner highlight on the photo edge */
+.whoi-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.whoi-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 700ms var(--ease-out);
+}
+
+.whoi-img:hover .whoi-photo img {
+    transform: scale(1.03);
+}
+
+/* Floating stat badges */
+.whoi-badge {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    animation: float 7s ease-in-out infinite;
+}
+
+.whoi-badge--years {
+    left: -24px;
+    bottom: 56px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.whoi-badge-number {
+    font-size: 2.25rem;
+    font-weight: var(--weight-bold);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.whoi-badge-label {
+    max-width: 6.5rem;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    line-height: 1.25;
+    color: var(--color-text-muted);
+}
+
+.whoi-badge--since {
+    top: -20px;
+    right: -4px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-on-dark);
+    background-color: var(--navy-950);
+    border: 1px solid var(--color-glass-border);
+    animation-delay: -3.5s;
+}
+
+.whoi-badge-icon {
+    display: inline-flex;
+    flex: none;
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    color: var(--color-on-accent);
+    background: var(--gradient-neon);
+    border-radius: var(--radius-sm);
+}
+
+@media screen and (max-width: 639px) {
+    .whoi-badge--years {
+        left: -8px;
+        bottom: 40px;
+    }
+
+    .whoi-badge--since {
+        top: -14px;
+        right: 8px;
+    }
+
+    .whoi-badge-number {
+        font-size: 1.75rem;
+    }
+}
 
 .who-text {
-    position: relative;
+    text-align: left;
 }
 
-.who-text  h2 {
-    margin-bottom: 20px;
+.who-text h2 {
+    margin: 0 0 var(--space-6);
 }
-
 
 .who-text p {
-    font-weight: 300;
-    color: #646171;
-    margin: 15px auto;
+    max-width: 62ch;
+    margin: 0 0 var(--space-4);
+    color: var(--color-text-muted);
 }
 
 a.btn-style-a.resume-btn {
     width: max-content;
-    background-color: #925eff;
-    border-radius: 5px;
+    margin-top: var(--space-4);
 }
-@media screen and (max-width: 1023px) { 
-    
+
+@media screen and (min-width: 1024px) {
     .who-img-text-wrapper {
-        flex-direction: column !important;
+        grid-template-columns: 5fr 6fr;
     }
-    
-    .who-img-text-wrapper .whoi-img, .who-img-text-wrapper .who-text {
-        width: 100%;
-        text-align: left;
+
+    .whoi-img {
+        margin: 0;
+        justify-self: center;
     }
-    
-    .who-img-text-wrapper h2.left-long-line {
-        margin-left: 0px;
-    }
-    
-    
 }

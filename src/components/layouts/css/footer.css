@@ -1,73 +1,220 @@
 footer.footer-area {
     position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: var(--navy-950);
+    color: var(--color-on-dark);
 }
 
-footer.footer-area img.footerbg {
+/* Faint grid and glow behind the contact block */
+footer.footer-area::before {
+    content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+    inset: 0;
     z-index: -1;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 20%, transparent 100%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 20%, transparent 100%);
 }
 
+.footer-blob {
+    top: -220px;
+    left: 20%;
+    width: 520px;
+    height: 360px;
+    background: var(--neon-glow);
+    opacity: 0.6;
+}
+
+/* Contact block */
+.footer-contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    padding: var(--section-space) 0 var(--space-16);
+    text-align: left;
+}
+
+.footer-contact-intro h2 {
+    margin: 0;
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-medium);
+    letter-spacing: -0.02em;
+    color: var(--color-on-dark);
+}
+
+.footer-contact-intro p {
+    max-width: 34rem;
+    margin: var(--space-4) 0 0;
+    color: var(--color-on-dark-soft);
+}
+
+.footer-contact-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    height: 100%;
+    padding: var(--space-4) var(--space-5);
+    color: var(--color-on-dark);
+    text-decoration: none;
+    background-color: var(--color-surface-on-dark);
+    border: 1px solid var(--color-on-dark-muted);
+    border-radius: var(--radius-lg);
+    transition: background-color var(--duration-base) var(--ease-out),
+        border-color var(--duration-base) var(--ease-out),
+        transform var(--duration-base) var(--ease-out);
+}
+
+.contact-card:hover {
+    background-color: var(--color-surface-on-dark-hover);
+    border-color: var(--violet-400);
+    transform: translateY(-2px);
+}
+
+.contact-card-icon {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 11px;
+    color: var(--color-on-accent);
+    background-color: var(--color-accent);
+    border-radius: var(--radius-md);
+}
+
+/* Freelance platforms keep their brand green */
+.contact-card-icon--upwork {
+    background-color: #14A800;
+}
+
+.contact-card-icon--fiverr {
+    padding: 6px;
+    background-color: #1DBF73;
+}
+
+.contact-card-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.contact-card-label {
+    font-size: var(--text-sm);
+    color: var(--color-on-dark-soft);
+}
+
+.contact-card-value {
+    font-weight: var(--weight-medium);
+    overflow-wrap: anywhere;
+}
+
+/* Brand, links, social */
 .footer-widgets {
-    position: relative;
-    padding: 60px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    padding: var(--space-10) 0;
+    border-top: 1px solid var(--color-on-dark-muted);
     text-align: center;
 }
 
-.footer-widgets h4 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    margin: 20px auto;
+.footer-brand {
+    margin: 0;
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    color: var(--color-on-dark);
 }
 
 ul.footer-links {
-    position: relative;
-    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2) var(--space-6);
 }
 
-ul.footer-links li {
-    position: relative;
-    display: inline-block;
-    margin: 15px;
-}
-
-ul.footer-links li a {
-    font-size: 16px;
-    line-height: 22px;
-    color: #fff;
+.footer-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    font-weight: 500;
+    color: var(--color-on-dark-soft);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer-link:hover {
+    color: var(--color-on-dark);
 }
 
 ul.footer-social {
-    position: relative;
-    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
 }
 
-ul.footer-social li {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
+ul.footer-social a {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    color: var(--color-on-dark);
+    border: 1px solid var(--color-on-dark-muted);
+    border-radius: var(--radius-pill);
+    transition: background-color var(--duration-base) var(--ease-out),
+        border-color var(--duration-base) var(--ease-out);
+}
+
+/* The Fiverr mark is a wordmark, so give it more room */
+ul.footer-social a.social-wide {
+    padding: 8px;
+}
+
+ul.footer-social a:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .footer-copyright {
-    position: relative;
-    border-top: 1px solid #fff;
-    padding: 20px;
+    padding: var(--space-5) 0;
+    border-top: 1px solid var(--color-on-dark-muted);
+    text-align: center;
 }
 
 .footer-copyright p {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 400;
-    line-height: 22px;
-    margin: 0px auto;
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-on-dark-soft);
+}
+
+@media screen and (min-width: 640px) {
+    .footer-contact-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer-contact {
+        grid-template-columns: 5fr 7fr;
+        align-items: center;
+        gap: var(--space-16);
+    }
+
+    .footer-widgets {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

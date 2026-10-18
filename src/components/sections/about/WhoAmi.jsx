@@ -1,29 +1,50 @@
-import './whoami.css';   
-import { Link } from "react-router-dom";
-import shahadatImg from '../../../assets/img/shahadat/shahadat.png'; 
-import whoImgBgShape from '../../../assets/img/shape/who-am-i.png'; 
+import './whoami.css';
+import shahadatImg from '../../../assets/img/shahadat/shahadat.png';
+import { CodeLineIcon } from '../../elements/icons';
+
 const WhoIam = () => {
   return (
-    <div className="who-area flex justify-center items-center" id="about">
+    <section className="who-area" id="about">
       <div className="container">
-        <div className="who-img-text-wrapper flex justify-center gap-10 flex-col md:flex-row p-20">
-          <div className="whoi-img md:w-1/2 text-center">
-            <img src={whoImgBgShape} alt="" className="whoimbgshape"/>
-            <img src={shahadatImg} alt="" />
+        <div className="who-img-text-wrapper">
+          <div className="whoi-img reveal">
+            <span className="whoi-glow" aria-hidden="true" />
+            <span className="whoi-frame" aria-hidden="true" />
+            <span className="decor-dots whoi-dots" aria-hidden="true" />
+            <div className="whoi-photo">
+              <img
+                src={shahadatImg}
+                alt="S M Shahadat Hossain"
+                width="500"
+                height="500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            {/* Badges repeat facts from the text below, so they are hidden from screen readers */}
+            <div className="whoi-badge whoi-badge--years" aria-hidden="true">
+              <span className="whoi-badge-number">8+</span>
+              <span className="whoi-badge-label">years of experience</span>
+            </div>
+            <div className="whoi-badge whoi-badge--since" aria-hidden="true">
+              <span className="whoi-badge-icon"><CodeLineIcon /></span>
+              <span>Writing code since 2011</span>
+            </div>
           </div>
-          <div className="who-text md:w-1/2 text-left flex flex-col justify-center">
+          <div className="who-text reveal" style={{ '--reveal-delay': '120ms' }}>
             <h2 className="left-long-line">Who am I?</h2>
+            <p>My journey with code started in 2011, when I was in class 9 - tinkering with small personal projects out of pure curiosity. In 2018, that curiosity became my profession.</p>
             <p>I'm a WordPress and Front-End Developer with 8+ years of experience building and maintaining websites. Most recently, I worked remotely with Incsub/CampusPress as a Site Specialist and later as a Site & Support Specialist, working on WordPress development, Gutenberg/FSE, website migrations, troubleshooting, and technical support.</p>
             <p>I enjoy solving complex website problems, building responsive interfaces, and using modern tools—including AI-assisted workflows—to make development faster and more efficient.</p>
             <p>Please feel free to reach out to me if you have any questions or would like to discuss a potential collaboration.</p>
-            
-            <Link to="https://drive.google.com/file/d/1Yu7iAobu7XVVnGl74XldnJm2HrGT2-wH/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-style-a resume-btn">
+
+            <a href="https://drive.google.com/file/d/1Yu7iAobu7XVVnGl74XldnJm2HrGT2-wH/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-style-a btn-accent resume-btn">
               Download Resume
-            </Link>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

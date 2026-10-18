@@ -5,23 +5,36 @@ on:
     branches:
       - master  # Change this to your main branch
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: npm
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Build
       run: npm run build
 
+    # GitHub Pages has no SPA fallback, so serve the app for unknown paths like /portfolio/12.
+    # Only added here: Cloudflare Pages (shahadatdev.com) already does this and must not get a 404.html.
+    - name: Add SPA fallback for GitHub Pages
+      run: cp build/index.html build/404.html
+
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages  # Change this to your GitHub Pages branch
-        FOLDER: build     # Change this to your build directory
+        branch: gh-pages  # Change this to your GitHub Pages branch
+        folder: build     # Change this to your build directory
