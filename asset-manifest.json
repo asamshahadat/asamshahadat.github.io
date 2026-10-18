@@ -1,22 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e68ef2d.css",
-    "main.js": "/static/js/main.a26131fb.js",
+    "main.css": "/static/css/main.972239aa.css",
+    "main.js": "/static/js/main.00aee103.js",
     "static/js/453.50677dfa.chunk.js": "/static/js/453.50677dfa.chunk.js",
-    "static/media/hero-bg-shape.png": "/static/media/hero-bg-shape.b3d61b3af52c4f482214.png",
     "static/media/shahadat.png": "/static/media/shahadat.c9be7a34f22955d50152.png",
-    "static/media/skills-bg.png": "/static/media/skills-bg.2ed17ff20851c3cbb255.png",
-    "static/media/expertin-bg.png": "/static/media/expertin-bg.70e4193e83b873f14ca6.png",
-    "static/media/footer-bg.png": "/static/media/footer-bg.1b09d1f926593de8cfe9.png",
-    "static/media/hero-vector-1.png": "/static/media/hero-vector-1.c7a1b74fdde1c828ce6c.png",
-    "static/media/hero-vector-2.png": "/static/media/hero-vector-2.1b46c33b7b160e0c266f.png",
     "index.html": "/index.html",
-    "main.5e68ef2d.css.map": "/static/css/main.5e68ef2d.css.map",
-    "main.a26131fb.js.map": "/static/js/main.a26131fb.js.map",
+    "main.972239aa.css.map": "/static/css/main.972239aa.css.map",
+    "main.00aee103.js.map": "/static/js/main.00aee103.js.map",
     "453.50677dfa.chunk.js.map": "/static/js/453.50677dfa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e68ef2d.css",
-    "static/js/main.a26131fb.js"
+    "static/css/main.972239aa.css",
+    "static/js/main.00aee103.js"
   ]
 }
