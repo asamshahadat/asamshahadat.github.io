@@ -2,18 +2,23 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Footer from '../layouts/Footer';
 import Header from '../layouts/Header';
-import portfolioData from '../../data/portfolioData.json';
 import './portfolio-detail.css';
 import usePageMeta from '../elements/usePageMeta';
+import usePortfolioData from '../elements/usePortfolioData';
 import useReveal from '../elements/useReveal';
 
 const PortfolioDetailPage = () => {
   const { id } = useParams();
-  const portfolioItem = portfolioData.find(item => item.id === parseInt(id));
+  const { projects, status, retry } = usePortfolioData();
+  const portfolioItem = projects.find(item => item.id === parseInt(id));
 
-  usePageMeta(portfolioItem
-    ? { title: portfolioItem.title, description: portfolioItem.description || undefined, path: `/portfolio/${portfolioItem.id}` }
-    : { title: 'Project not found', path: '/portfolio' });
+  let pageMeta = { title: 'Project not found', path: '/portfolio' };
+  if (portfolioItem) {
+    pageMeta = { title: portfolioItem.title, description: portfolioItem.description || undefined, path: `/portfolio/${portfolioItem.id}` };
+  } else if (status !== 'ready') {
+    pageMeta = { title: 'Portfolio', path: `/portfolio/${id}` };
+  }
+  usePageMeta(pageMeta);
   useReveal();
 
   return (
@@ -49,6 +54,15 @@ const PortfolioDetailPage = () => {
                 </a>
               )}
             </article>
+          ) : status === 'loading' ? (
+            <div className="portfolio-detail portfolio-detail-missing" role="status">
+              <p>Loading project…</p>
+            </div>
+          ) : status === 'error' ? (
+            <div className="portfolio-detail portfolio-detail-missing" role="alert">
+              <h1>Project could not be loaded.</h1>
+              <button type="button" className="btn-style-a btn-accent" onClick={retry}>Try again</button>
+            </div>
           ) : (
             <div className="portfolio-detail portfolio-detail-missing">
               <h1>Project not found.</h1>

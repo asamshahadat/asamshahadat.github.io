@@ -1,11 +1,10 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import portfolioData from '../../../data/portfolioData.json';
 import './portfolio.css';
 import { BracesIcon, CodeLineIcon } from '../../elements/icons';
+import usePortfolioData from '../../elements/usePortfolioData';
 
 const ALL = 'All';
-const categories = [...new Set(portfolioData.map(item => item.category))];
 const CATEGORY_LABELS = { wordpress: 'WordPress', frontend: 'Frontend' };
 
 // Display order for the industry filter
@@ -40,31 +39,38 @@ function getPageItems(current, total) {
 }
 
 const Portfolio = ({ itemsPerPage = 6 }) => { // Set default value for itemsPerPage
+  const { projects, status, retry } = usePortfolioData();
   const [currentPage, setCurrentPage] = useState(1);
   // Only one filter is active at a time: All, a technology, or an industry
   const [activeFilter, setActiveFilter] = useState({ type: ALL, value: ALL });
 
-  const filters = useMemo(() => [
-    { type: ALL, value: ALL, label: ALL, count: portfolioData.length },
-    ...categories.map(category => ({
-      type: 'category',
-      value: category,
-      label: CATEGORY_LABELS[category] || category,
-      count: portfolioData.filter(item => item.category === category).length,
-    })),
-    ...INDUSTRIES.map(industry => ({
-      type: 'industry',
-      value: industry,
-      label: industry,
-      count: portfolioData.filter(item => item.industry === industry).length,
-    })).filter(filter => filter.count > 0),
-  ], []);
+  const filters = useMemo(() => {
+    if (projects.length === 0) {
+      return [];
+    }
+    const categories = [...new Set(projects.map(item => item.category))];
+    return [
+      { type: ALL, value: ALL, label: ALL, count: projects.length },
+      ...categories.map(category => ({
+        type: 'category',
+        value: category,
+        label: CATEGORY_LABELS[category] || category,
+        count: projects.filter(item => item.category === category).length,
+      })),
+      ...INDUSTRIES.map(industry => ({
+        type: 'industry',
+        value: industry,
+        label: industry,
+        count: projects.filter(item => item.industry === industry).length,
+      })).filter(filter => filter.count > 0),
+    ];
+  }, [projects]);
 
   const filteredPortfolio = useMemo(
     () => activeFilter.type === ALL
-      ? portfolioData
-      : portfolioData.filter(item => item[activeFilter.type] === activeFilter.value),
-    [activeFilter]
+      ? projects
+      : projects.filter(item => item[activeFilter.type] === activeFilter.value),
+    [projects, activeFilter]
   );
 
   const totalPages = Math.ceil(filteredPortfolio.length / itemsPerPage);
@@ -114,7 +120,16 @@ const Portfolio = ({ itemsPerPage = 6 }) => { // Set default value for itemsPerP
           ))}
         </div>
 
-        {currentItems.length > 0 ? (
+        {status === 'loading' && <p className="portfolio-empty" role="status">Loading projects…</p>}
+
+        {status === 'error' && (
+          <div className="portfolio-empty" role="alert">
+            <p>Projects could not be loaded right now.</p>
+            <button type="button" className="btn-style-a btn-accent" onClick={retry}>Try again</button>
+          </div>
+        )}
+
+        {status === 'ready' && (currentItems.length > 0 ? (
           <div className="portfolio-contents">
             {currentItems.map((item, index) => (
               <article key={item.id} className="single-portfolio-list" style={{ '--i': index }}>
@@ -138,7 +153,7 @@ const Portfolio = ({ itemsPerPage = 6 }) => { // Set default value for itemsPerP
           </div>
         ) : (
           <p className="portfolio-empty">No projects found for this filter.</p>
-        )}
+        ))}
 
         {totalPages > 1 && (
           <nav className="pagination" aria-label="Portfolio pages">
