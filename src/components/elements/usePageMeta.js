@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { isPortfolioRoute } from "./routes";
 
 export const SITE_URL = "https://shahadatdev.com";
 export const SITE_NAME = "S M Shahadat Hossain";
@@ -9,6 +10,25 @@ const setMeta = (selector, value) => {
     const element = document.head.querySelector(selector);
     if (element) {
         element.setAttribute(selector.startsWith("link") ? "href" : "content", value);
+    }
+};
+
+// Head tags in public/index.html that carry contact details or social links.
+// They're taken out on portfolio routes and put back when leaving them.
+const CONTACT_HEAD_SELECTORS = ['script[type="application/ld+json"]', 'meta[name="twitter:site"]'];
+let detachedHeadTags = [];
+
+const syncContactHeadTags = (hide) => {
+    if (hide) {
+        CONTACT_HEAD_SELECTORS.forEach((selector) => {
+            document.head.querySelectorAll(selector).forEach((element) => {
+                detachedHeadTags.push(element);
+                element.remove();
+            });
+        });
+    } else if (detachedHeadTags.length > 0) {
+        detachedHeadTags.forEach((element) => document.head.appendChild(element));
+        detachedHeadTags = [];
     }
 };
 
@@ -26,6 +46,7 @@ const usePageMeta = ({ title, description = DEFAULT_DESCRIPTION, path = "/" }) =
         setMeta('meta[property="og:url"]', url);
         setMeta('meta[name="twitter:title"]', fullTitle);
         setMeta('meta[name="twitter:description"]', description);
+        syncContactHeadTags(isPortfolioRoute(path));
     }, [title, description, path]);
 };
 

@@ -3,6 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../elements/icons";
 import SectionLink from "../elements/SectionLink";
+import { isPortfolioRoute } from "../elements/routes";
 
 const MOBILE_QUERY = "(max-width: 960px)";
 
@@ -88,11 +89,13 @@ const Header = () => {
                             Portfolio
                         </NavLink>
                     </li>
-                    <li className="nav-item">
-                        <SectionLink sectionId="footer" onClick={closeMenu} spy>
-                            Find Me
-                        </SectionLink>
-                    </li>
+                    {!isPortfolioRoute(pathname) && (
+                        <li className="nav-item">
+                            <SectionLink sectionId="footer" onClick={closeMenu} spy>
+                                Find Me
+                            </SectionLink>
+                        </li>
+                    )}
                 </ul>
                 <button
                     type="button"

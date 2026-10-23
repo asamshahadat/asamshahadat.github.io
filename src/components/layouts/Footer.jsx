@@ -1,6 +1,7 @@
 import "./css/footer.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SectionLink from "../elements/SectionLink";
+import { isPortfolioRoute } from "../elements/routes";
 import { ChatIcon, FacebookIcon, FiverrIcon, GithubIcon, LinkedinIcon, MailIcon, UpworkIcon, XIcon } from "../elements/icons";
 
 const contactLinks = [
@@ -24,29 +25,35 @@ const socialLinks = [
 const externalProps = { target: "_blank", rel: "noopener noreferrer" };
 
 const Footer = () => {
+    const { pathname } = useLocation();
+    // Portfolio pages get no contact block, social icons or Contact link (see routes.js)
+    const showContact = !isPortfolioRoute(pathname);
+
     return (
-        <footer className="footer-area" id="footer">
+        <footer className={showContact ? "footer-area" : "footer-area footer-area--no-contact"} id="footer">
             <span className="decor-blob footer-blob" aria-hidden="true" />
             <div className="container">
-                <div className="footer-contact reveal" id="contact">
-                    <div className="footer-contact-intro">
-                        <h2>Let's work together</h2>
-                        <p>Have a project in mind or need help with a WordPress site? Feel free to reach out through any of the channels below.</p>
+                {showContact && (
+                    <div className="footer-contact reveal" id="contact">
+                        <div className="footer-contact-intro">
+                            <h2>Let's work together</h2>
+                            <p>Have a project in mind or need help with a WordPress site? Feel free to reach out through any of the channels below.</p>
+                        </div>
+                        <ul className="footer-contact-list">
+                            {contactLinks.map(({ label, value, href, Icon, external, tone }) => (
+                                <li key={label}>
+                                    <a href={href} className="contact-card" {...(external ? externalProps : {})}>
+                                        <span className={tone ? `contact-card-icon contact-card-icon--${tone}` : "contact-card-icon"}><Icon /></span>
+                                        <span className="contact-card-text">
+                                            <span className="contact-card-label">{label}</span>
+                                            <span className="contact-card-value">{value}</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-                    <ul className="footer-contact-list">
-                        {contactLinks.map(({ label, value, href, Icon, external, tone }) => (
-                            <li key={label}>
-                                <a href={href} className="contact-card" {...(external ? externalProps : {})}>
-                                    <span className={tone ? `contact-card-icon contact-card-icon--${tone}` : "contact-card-icon"}><Icon /></span>
-                                    <span className="contact-card-text">
-                                        <span className="contact-card-label">{label}</span>
-                                        <span className="contact-card-value">{value}</span>
-                                    </span>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                )}
                 <div className="footer-widgets">
                     <p className="footer-brand">Shahadat</p>
                     <nav aria-label="Footer">
@@ -67,20 +74,24 @@ const Footer = () => {
                             <li>
                                 <Link to="/" className="footer-link">Blog</Link>
                             </li> */}
-                            <li>
-                                <SectionLink sectionId="contact" className="footer-link">Contact</SectionLink>
-                            </li>
+                            {showContact && (
+                                <li>
+                                    <SectionLink sectionId="contact" className="footer-link">Contact</SectionLink>
+                                </li>
+                            )}
                         </ul>
                     </nav>
-                    <ul className="footer-social">
-                        {socialLinks.map(({ label, href, Icon, wide }) => (
-                            <li key={label}>
-                                <a href={href} aria-label={label} title={label} className={wide ? "social-wide" : undefined} {...externalProps}>
-                                    <Icon />
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                    {showContact && (
+                        <ul className="footer-social">
+                            {socialLinks.map(({ label, href, Icon, wide }) => (
+                                <li key={label}>
+                                    <a href={href} aria-label={label} title={label} className={wide ? "social-wide" : undefined} {...externalProps}>
+                                        <Icon />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
                 <div className="footer-copyright">
                     <p>©Shahadat 2026. All rights reserved.</p>

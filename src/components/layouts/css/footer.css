@@ -130,6 +130,11 @@ footer.footer-area::before {
     text-align: center;
 }
 
+/* Without the contact block above it, the widgets row starts the footer and needs no divider */
+.footer-area--no-contact .footer-widgets {
+    border-top: 0;
+}
+
 .footer-brand {
     margin: 0;
     font-size: var(--text-lg);
