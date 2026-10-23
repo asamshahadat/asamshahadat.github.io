@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.aaa83cb4.css",
-    "main.js": "/static/js/main.41b9f4f4.js",
+    "main.js": "/static/js/main.9c573bef.js",
     "static/js/453.50677dfa.chunk.js": "/static/js/453.50677dfa.chunk.js",
     "static/media/shahadat.png": "/static/media/shahadat.c9be7a34f22955d50152.png",
     "index.html": "/index.html",
     "main.aaa83cb4.css.map": "/static/css/main.aaa83cb4.css.map",
-    "main.41b9f4f4.js.map": "/static/js/main.41b9f4f4.js.map",
+    "main.9c573bef.js.map": "/static/js/main.9c573bef.js.map",
     "453.50677dfa.chunk.js.map": "/static/js/453.50677dfa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aaa83cb4.css",
-    "static/js/main.41b9f4f4.js"
+    "static/js/main.9c573bef.js"
   ]
 }
