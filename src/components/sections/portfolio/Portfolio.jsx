@@ -7,19 +7,8 @@ import usePortfolioData from '../../elements/usePortfolioData';
 const ALL = 'All';
 const CATEGORY_LABELS = { wordpress: 'WordPress', frontend: 'Frontend' };
 
-// Display order for the industry filter
-const INDUSTRIES = [
-  'Real Estate & Home',
-  'Business & Professional',
-  'Tech & SaaS',
-  'Health & Wellness',
-  'Education & Coaching',
-  'Industry & Energy',
-  'Travel & Hospitality',
-  'Creative & Media',
-  'E-commerce',
-  'Local Services',
-];
+// A project can belong to several industries; `industry` alone is the fallback
+const getIndustries = item => item.industries || (item.industry ? [item.industry] : []);
 
 function truncateString(str, maxLength) {
   if (str.length > maxLength) {
@@ -49,6 +38,7 @@ const Portfolio = ({ itemsPerPage = 6 }) => { // Set default value for itemsPerP
       return [];
     }
     const categories = [...new Set(projects.map(item => item.category))];
+    const industries = [...new Set(projects.flatMap(getIndustries))].sort((a, b) => a.localeCompare(b));
     return [
       { type: ALL, value: ALL, label: ALL, count: projects.length },
       ...categories.map(category => ({
@@ -57,19 +47,25 @@ const Portfolio = ({ itemsPerPage = 6 }) => { // Set default value for itemsPerP
         label: CATEGORY_LABELS[category] || category,
         count: projects.filter(item => item.category === category).length,
       })),
-      ...INDUSTRIES.map(industry => ({
+      ...industries.map(industry => ({
         type: 'industry',
         value: industry,
         label: industry,
-        count: projects.filter(item => item.industry === industry).length,
-      })).filter(filter => filter.count > 0),
+        count: projects.filter(item => getIndustries(item).includes(industry)).length,
+      })),
     ];
   }, [projects]);
 
   const filteredPortfolio = useMemo(
-    () => activeFilter.type === ALL
-      ? projects
-      : projects.filter(item => item[activeFilter.type] === activeFilter.value),
+    () => {
+      if (activeFilter.type === ALL) {
+        return projects;
+      }
+      if (activeFilter.type === 'industry') {
+        return projects.filter(item => getIndustries(item).includes(activeFilter.value));
+      }
+      return projects.filter(item => item[activeFilter.type] === activeFilter.value);
+    },
     [projects, activeFilter]
   );
 
