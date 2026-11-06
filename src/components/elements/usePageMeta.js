@@ -3,7 +3,7 @@ import { isPortfolioRoute } from "./routes";
 
 export const SITE_URL = "https://shahadatdev.com";
 export const SITE_NAME = "S M Shahadat Hossain";
-export const DEFAULT_TITLE = "S M Shahadat Hossain — WordPress & Front-End Developer";
+export const DEFAULT_TITLE = "S M Shahadat Hossain - WordPress & Front-End Developer";
 export const DEFAULT_DESCRIPTION = "WordPress & Front-End Developer with 8+ years of web development experience, specializing in modern WordPress development, Gutenberg/FSE, website migrations, responsive front-end development, and technical troubleshooting.";
 
 const setMeta = (selector, value) => {
